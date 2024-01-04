@@ -7,34 +7,6 @@ Webflow.push(function () {
     window.scrollTo(0, 0);
 
     function page_anim() {
-        if ($(".tools-slider").length) {
-            $(".tools-slider").slick({
-                dots: false,
-                arrows: false,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 1200,
-                speed: 400,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                centerMode: false,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                        },
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 2,
-                        },
-                    },
-                ],
-            });
-        }
-
         //title/paragraph text anim
         if ($("[data-effect]").length) {
             let el_effects = document.querySelectorAll("[data-effect]");
