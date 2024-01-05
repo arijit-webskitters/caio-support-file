@@ -82,7 +82,7 @@ Webflow.push(function () {
     .to([para, btn], { duration: 0.5, opacity: 0, yPercent: 25 }, "<")
     .to(
       img,
-      { duration: 1, yPercent: 0, xPercent: 42, scale: 1.1, rotate: 0 },
+      { duration: 1, yPercent: 0, xPercent: 42, scale: 1, rotate: 0 },
       "-=0.3"
     )
     .to(sunheadline, { duration: 0.5, opacity: 1 }, "-=0.3")
@@ -91,9 +91,9 @@ Webflow.push(function () {
       img,
       {
         duration: 1,
-        yPercent: 0,
+        yPercent: -10,
         xPercent: -25,
-        scale: 0.9,
+        scale: 0.8,
         rotate: -45,
         onEnd: () => itemTl.reverse(),
       },
