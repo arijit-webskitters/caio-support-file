@@ -121,7 +121,7 @@ Webflow.push(function () {
     // markers: true,
       
     onEnter:()=>ScrollTrigger.refresh(),
-    onLeave:()=>ScrollTrigger.refresh()
+    //onLeave:()=>ScrollTrigger.refresh()
   });
 
   ScrollTrigger.create({
