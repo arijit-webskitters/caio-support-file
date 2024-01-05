@@ -120,6 +120,7 @@ Webflow.push(function () {
     scrub: 1.3,
     // markers: true,
       
+    onEnter:()=>ScrollTrigger.refresh(),
     onLeave:()=>ScrollTrigger.refresh()
   });
 
