@@ -399,6 +399,23 @@ Webflow.push(function () {
                 });
             });
         }
+
+        if ($("[data-scroll]").length) {
+          const scroll_box = document.querySelectorAll("[data-scroll]");
+          scroll_box.forEach(function (revEl) {
+            const dataval = revEl.dataset.scroll;
+            gsap.to(revEl, {
+              x: () => (revEl.scrollWidth - window.innerWidth + (window.innerWidth > 991 ? 50 : 20)) * -1,
+              scrollTrigger: {
+                start: () => dataval == "center" ? "top center" : "top 70%",
+                end: () => dataval == "center" ? "bottom 80%" : "bottom 30%",
+                trigger: revEl,
+                scrub: 1.3,
+                // markers: true,
+              },
+            })
+          });
+        }
     }
 
     //page loader
