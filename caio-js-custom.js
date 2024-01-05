@@ -27,8 +27,8 @@ Webflow.push(function () {
   });
   gsap.set(img, { opacity: 0, yPercent: 25, scale: 0.7, rotate: -25 });
   gsap.set(btn, { opacity: 0, yPercent: 100 });
-  gsap.set(sunheadline, { opacity: 0 });
-  gsap.set(items, { opacity: 0 });
+  gsap.set(sunheadline, { opacity: 0, pointerEvents: "none" });
+  gsap.set(items, { opacity: 0, pointerEvents: "none" });
   gsap.set(items.querySelectorAll(".the-caio_item"), {
     opacity: 0,
     yPercent: 100,
@@ -85,8 +85,8 @@ Webflow.push(function () {
       { duration: 1, yPercent: 0, xPercent: 42, scale: 1, rotate: 0 },
       "-=0.3"
     )
-    .to(sunheadline, { duration: 0.5, opacity: 1 }, "-=0.3")
-    .to(sunheadline, { delay: 0.15, duration: 0.3, opacity: 0 })
+    .to(sunheadline, { duration: 0.5, opacity: 1, pointerEvents: "all" }, "-=0.3")
+    .to(sunheadline, { delay: 0.15, duration: 0.3, opacity: 0, pointerEvents: "none" })
     .to(
       img,
       {
@@ -103,6 +103,7 @@ Webflow.push(function () {
       items,
       {
         opacity: 1,
+      pointerEvents: "all",
         onStart: () => itemTl.restart(),
       },
       "-=0.5"
