@@ -1,0 +1,778 @@
+
+.banner-caio-tools figure>.tool-txt {
+  position: absolute;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 7px 11px;
+  border-radius: 5px;
+  left: 0%;
+  top: 0;
+  font-size: 9px;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  max-width: 125px;
+  font-weight: 600;
+}
+.banner-caio-tools figure> img {
+    width: 100% !important;
+    display: block !important;
+}
+
+.rv-section.present .banner-caio-tools figure>.tool-txt {
+  opacity: 1;
+}
+
+.rv-section .banner-caio-tools figure>.tool-txt>span {
+  display: block;
+  font-weight: 300;
+  font-size: 8px;
+  margin-top: 1px;
+}
+
+
+
+.banner-caio-tools figure.rht>span {
+  left: auto;
+  right: 0%;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.banner-caio-tools figure>.tool-txt::before {
+  content: '';
+  position: absolute;
+  top: 45%;
+  right: 0;
+  border-top: 1px dashed var(--primary-color);
+  border-right: 1px dashed var(--primary-color);
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.banner-caio-tools figure.rht>span::before {
+  left: 0;
+  right: auto;
+  border-left: 1px dashed var(--primary-color);
+  border-right: 0;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.banner-caio-tools figure.rht {
+  left: auto;
+  right: 0;
+}
+
+.banner-caio-tools img {
+  width: 100%;
+  opacity: 0;
+}
+
+.banner-caio-tools figure:nth-child(1) {
+  bottom: 0%;
+}
+
+.banner-caio-tools figure:nth-child(1)>.tool-txt {
+  left: -10%;
+  top: 22%;
+}
+
+.banner-caio-tools figure:nth-child(1)>.tool-txt::before {
+  width: 50px;
+  height: 0;
+}
+
+.banner-caio-tools figure:nth-child(1) img {
+  -webkit-transform: translateX(105%);
+  -ms-transform: translateX(105%);
+  transform: translateX(105%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(1) img {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(1)>.tool-txt {
+  -webkit-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+
+.banner-caio-tools figure:nth-child(2) {
+  bottom: 17%;
+  width: 36%;
+  left: -3%;
+}
+
+.banner-caio-tools figure:nth-child(2)>.tool-txt {
+  left: -10%;
+  top: 34%;
+}
+
+.banner-caio-tools figure:nth-child(2)>.tool-txt::before {
+  width: 50px;
+  height: 11px;
+}
+
+.banner-caio-tools figure:nth-child(2) img {
+  -webkit-transform: translate(100%, 30px);
+  -ms-transform: translate(100%, 30px);
+  transform: translate(100%, 30px);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(2) img {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(2)>.tool-txt {
+  -webkit-transition-delay: 0.85s;
+  -o-transition-delay: 0.85s;
+  transition-delay: 0.85s;
+}
+
+.banner-caio-tools figure:nth-child(3) {
+  bottom: 30%;
+  width: 35%;
+  left: -2%;
+}
+
+.banner-caio-tools figure:nth-child(3)>.tool-txt {
+  left: -10%;
+  top: 29%;
+}
+
+.banner-caio-tools figure:nth-child(3)>.tool-txt::before {
+  width: 40px;
+  height: 0;
+}
+
+.banner-caio-tools figure:nth-child(3) img {
+  -webkit-transform: translate(100%, 30px);
+  -ms-transform: translate(100%, 30px);
+  transform: translate(100%, 30px);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(3) img {
+  opacity: 1;
+  -webkit-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(3)>.tool-txt {
+  -webkit-transition-delay: 1.05s;
+  -o-transition-delay: 1.05s;
+  transition-delay: 1.05s;
+}
+
+.banner-caio-tools figure:nth-child(4) {
+  bottom: 43%;
+  left: -4%;
+  width: 38%;
+}
+
+.banner-caio-tools figure:nth-child(4)>.tool-txt {
+  left: -10%;
+  top: 19%;
+}
+
+.banner-caio-tools figure:nth-child(4)>.tool-txt::before {
+  top: 47%;
+  width: 50px;
+  height: 11px;
+}
+
+.banner-caio-tools figure:nth-child(4) img {
+  -webkit-transform: translate(100%, 50px);
+  -ms-transform: translate(100%, 50px);
+  transform: translate(100%, 50px);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(4) img {
+  opacity: 1;
+  -webkit-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(4)>.tool-txt {
+  -webkit-transition-delay: 1.25s;
+  -o-transition-delay: 1.25s;
+  transition-delay: 1.25s;
+}
+
+.banner-caio-tools figure:nth-child(5) {
+  left: 8%;
+  top: 5%;
+  width: 35%;
+}
+
+.banner-caio-tools figure:nth-child(5)>.tool-txt {
+  left: -5%;
+  top: 28%;
+}
+
+.banner-caio-tools figure:nth-child(5)>.tool-txt::before {
+  width: 50px;
+  height: 11px;
+}
+
+.banner-caio-tools figure:nth-child(5) img {
+  -webkit-transform: translate(100%, 130px);
+  -ms-transform: translate(100%, 130px);
+  transform: translate(100%, 130px);
+  -webkit-transition-delay: 0.8s;
+  -o-transition-delay: 0.8s;
+  transition-delay: 0.8s;
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(5) img {
+  opacity: 1;
+  -webkit-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(5)>.tool-txt {
+  -webkit-transition-delay: 1.45s;
+  -o-transition-delay: 1.45s;
+  transition-delay: 1.45s;
+}
+
+.banner-caio-tools figure:nth-child(6) {
+  top: -3%;
+  left: 52%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 40%;
+  position: relative;
+}
+
+.banner-caio-tools figure:nth-child(6)>.tool-txt {
+  left: -16%;
+  top: 13%;
+}
+
+.banner-caio-tools figure:nth-child(6)>.tool-txt::before {
+  width: 46px;
+  height: 0;
+}
+
+.banner-caio-tools figure:nth-child(6) img:nth-child(1) {
+  position: absolute;
+  left: -25%;
+  bottom: 14%;
+  width: 90%;
+  z-index: 1;
+  -webkit-transform: translateY(115%);
+  -ms-transform: translateY(115%);
+  transform: translateY(115%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(6) img:nth-child(1) {
+  opacity: 1;
+  -webkit-transition-delay: 1.2s;
+  -o-transition-delay: 1.2s;
+  transition-delay: 1.2s;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(6)>.tool-txt {
+  -webkit-transition-delay: 1.65s;
+  -o-transition-delay: 1.65s;
+  transition-delay: 1.65s;
+}
+
+.banner-caio-tools figure:nth-child(6) img:nth-child(2) {
+  -webkit-transform: translateY(75%);
+  -ms-transform: translateY(75%);
+  transform: translateY(75%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(6) img:nth-child(2) {
+  opacity: 1;
+  -webkit-transition-delay: 1.2s;
+  -o-transition-delay: 1.2s;
+  transition-delay: 1.2s;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.banner-caio-tools figure:nth-child(6) img:nth-child(3) {
+  position: absolute;
+  right: -32%;
+  bottom: 10%;
+  width: 90%;
+  z-index: 1;
+  -webkit-transform: translateY(115%);
+  -ms-transform: translateY(115%);
+  transform: translateY(115%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(6) img:nth-child(3) {
+  opacity: 1;
+  -webkit-transition-delay: 1.2s;
+  -o-transition-delay: 1.2s;
+  transition-delay: 1.2s;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.banner-caio-tools figure:nth-child(7) {
+  top: -13%;
+  left: 51%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 40%;
+}
+
+.banner-caio-tools figure:nth-child(7)>.tool-txt {
+  left: 15%;
+  top: 9%;
+}
+
+.banner-caio-tools figure:nth-child(7)>.tool-txt::before {
+  width: 50px;
+  height: 0px;
+}
+
+.banner-caio-tools figure:nth-child(7) img {
+  -webkit-transform: translateY(115%);
+  -ms-transform: translateY(115%);
+  transform: translateY(115%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(7) img {
+  opacity: 1;
+  -webkit-transition-delay: 1.4s;
+  -o-transition-delay: 1.4s;
+  transition-delay: 1.4s;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(7)>.tool-txt {
+  -webkit-transition-delay: 1.85s;
+  -o-transition-delay: 1.85s;
+  transition-delay: 1.85s;
+}
+
+.banner-caio-tools figure:nth-child(8) {
+  top: 5%;
+  right: 9%;
+}
+
+.banner-caio-tools figure:nth-child(8)>.tool-txt {
+  right: 29%;
+  top: -21%;
+  width: 100%;
+}
+
+.banner-caio-tools figure:nth-child(8)>.tool-txt::before {
+  width: 8px;
+  height: 80px;
+}
+
+.banner-caio-tools figure:nth-child(8) img {
+  -webkit-transform: translate(-30%, 60%);
+  -ms-transform: translate(-30%, 60%);
+  transform: translate(-30%, 60%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(8) img {
+  opacity: 1;
+  -webkit-transition-delay: 1.6s;
+  -o-transition-delay: 1.6s;
+  transition-delay: 1.6s;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(8)>.tool-txt {
+  -webkit-transition-delay: 2.05s;
+  -o-transition-delay: 2.05s;
+  transition-delay: 2.05s;
+}
+
+.banner-caio-tools figure:nth-child(9) {
+  top: 5%;
+  right: -4%;
+}
+
+.banner-caio-tools figure:nth-child(9)>.tool-txt {
+  right: -21%;
+  top: 4%;
+}
+
+.banner-caio-tools figure:nth-child(9)>.tool-txt::before {
+  width: 50px;
+  height: 0;
+}
+
+.banner-caio-tools figure:nth-child(9) img {
+  -webkit-transform: translate(-100%, 100%);
+  -ms-transform: translate(-100%, 100%);
+  transform: translate(-100%, 100%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(9) img {
+  opacity: 1;
+  -webkit-transition-delay: 1.8s;
+  -o-transition-delay: 1.8s;
+  transition-delay: 1.8s;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(9)>.tool-txt {
+  -webkit-transition-delay: 2.25s;
+  -o-transition-delay: 2.25s;
+  transition-delay: 2.25s;
+}
+
+.banner-caio-tools figure:nth-child(10) {
+  bottom: 49%;
+  right: -5%;
+}
+
+.banner-caio-tools figure:nth-child(10)>.tool-txt {
+  right: -11%;
+  top: 12%;
+}
+
+.banner-caio-tools figure:nth-child(10)>.tool-txt::before {
+  width: 34px;
+}
+
+.banner-caio-tools figure:nth-child(10) img {
+  -webkit-transform: translate(-100%, 80%);
+  -ms-transform: translate(-100%, 80%);
+  transform: translate(-100%, 80%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(10) img {
+  opacity: 1;
+  -webkit-transition-delay: 2s;
+  -o-transition-delay: 2s;
+  transition-delay: 2s;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(10)>.tool-txt {
+  -webkit-transition-delay: 2.45s;
+  -o-transition-delay: 2.45s;
+  transition-delay: 2.45s;
+}
+
+.banner-caio-tools figure:nth-child(11) {
+  bottom: 38%;
+  right: -6%;
+}
+
+.banner-caio-tools figure:nth-child(11)>.tool-txt {
+  right: -11%;
+  top: 15%;
+}
+
+.banner-caio-tools figure:nth-child(11)>.tool-txt::before {
+  width: 39px;
+  height: 10px;
+}
+
+.banner-caio-tools figure:nth-child(11) img {
+  -webkit-transform: translate(-100%, 50%);
+  -ms-transform: translate(-100%, 50%);
+  transform: translate(-100%, 50%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(11) img {
+  opacity: 1;
+  -webkit-transition-delay: 2.2s;
+  -o-transition-delay: 2.2s;
+  transition-delay: 2.2s;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(11)>.tool-txt {
+  -webkit-transition-delay: 2.65s;
+  -o-transition-delay: 2.65s;
+  transition-delay: 2.65s;
+}
+
+.banner-caio-tools figure:nth-child(12) {
+  bottom: 29%;
+  right: -3%;
+}
+
+.banner-caio-tools figure:nth-child(12)>.tool-txt {
+  right: 8%;
+  top: 21%;
+}
+
+.banner-caio-tools figure:nth-child(12)>.tool-txt::before {
+  width: 20px;
+  height: 15px;
+}
+
+.banner-caio-tools figure:nth-child(12) img {
+  -webkit-transform: translate(-100%, 30%);
+  -ms-transform: translate(-100%, 30%);
+  transform: translate(-100%, 30%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(12) img {
+  opacity: 1;
+  -webkit-transition-delay: 2.4s;
+  -o-transition-delay: 2.4s;
+  transition-delay: 2.4s;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(12)>.tool-txt {
+  -webkit-transition-delay: 2.85s;
+  -o-transition-delay: 2.85s;
+  transition-delay: 2.85s;
+}
+
+.banner-caio-tools figure:nth-child(13) {
+  bottom: 23%;
+  right: -6%;
+}
+
+.banner-caio-tools figure:nth-child(13)>.tool-txt {
+  right: -3%;
+  top: 33%;
+}
+
+.banner-caio-tools figure:nth-child(13)>.tool-txt::before {
+  width: 21px;
+  height: 0;
+}
+
+.banner-caio-tools figure:nth-child(13) img {
+  -webkit-transform: translate(-100%, 20%);
+  -ms-transform: translate(-100%, 20%);
+  transform: translate(-100%, 20%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(13) img {
+  opacity: 1;
+  -webkit-transition-delay: 2.6s;
+  -o-transition-delay: 2.6s;
+  transition-delay: 2.6s;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(13)>.tool-txt {
+  -webkit-transition-delay: 3.05s;
+  -o-transition-delay: 3.05s;
+  transition-delay: 3.05s;
+}
+
+.banner-caio-tools figure:nth-child(14) {
+  bottom: 16%;
+  right: -8%;
+}
+
+.banner-caio-tools figure:nth-child(14)>.tool-txt {
+  right: -4%;
+  top: 44%;
+}
+
+.banner-caio-tools figure:nth-child(14)>.tool-txt::before {
+  width: 17px;
+  height: 13px;
+  border-top: 0;
+  border-bottom: 1px solid var(--primary-color);
+  top: 15%;
+}
+
+.banner-caio-tools figure:nth-child(14) img {
+  -webkit-transform: translate(-60%, 15%);
+  -ms-transform: translate(-60%, 15%);
+  transform: translate(-60%, 15%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(14) img {
+  opacity: 1;
+  -webkit-transition-delay: 2.8s;
+  -o-transition-delay: 2.8s;
+  transition-delay: 2.8s;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(14)>.tool-txt {
+  -webkit-transition-delay: 3.25s;
+  -o-transition-delay: 3.25s;
+  transition-delay: 3.25s;
+}
+
+.banner-caio-tools figure:nth-child(15) {
+  bottom: 0;
+  right: -8%;
+}
+
+.banner-caio-tools figure:nth-child(15)>.tool-txt {
+  right: 4%;
+  top: 34%;
+}
+
+.banner-caio-tools figure:nth-child(15)>.tool-txt::before {
+  width: 23px;
+  height: 0;
+}
+
+.banner-caio-tools figure:nth-child(15) img {
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  -webkit-transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  transition: opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out;
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(15) img {
+  opacity: 1;
+  -webkit-transition-delay: 3s;
+  -o-transition-delay: 3s;
+  transition-delay: 3s;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.rv-section.present .banner-caio-tools figure:nth-child(15)>.tool-txt {
+  -webkit-transition-delay: 3.45s;
+  -o-transition-delay: 3.45s;
+  transition-delay: 3.45s;
+}
