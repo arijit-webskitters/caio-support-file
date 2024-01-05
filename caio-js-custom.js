@@ -407,8 +407,8 @@ Webflow.push(function () {
             gsap.to(revEl, {
               x: () => (revEl.scrollWidth - window.innerWidth + (window.innerWidth > 991 ? 50 : 20)) * -1,
               scrollTrigger: {
-                start: () => dataval == "center" ? "top 80%" : "top 70%",
-                end: () => dataval == "center" ? "bottom 40%" : "bottom 30%",
+                start: () => dataval == "center" ? "top 65%" : "top 70%",
+                end: () => dataval == "center" ? "bottom 45%" : "bottom 30%",
                 trigger: revEl,
                 scrub: 1.3,
                 // markers: true,
