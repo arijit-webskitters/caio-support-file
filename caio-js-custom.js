@@ -10,7 +10,7 @@ Webflow.push(function () {
 
         setTimeout(function(){
             ScrollTrigger.refresh()
-        }, 100)
+        }, 300)
 
         if ($(".the-caio-sec").length) {
   let caioTl = gsap.timeline();
