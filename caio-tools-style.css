@@ -36,7 +36,7 @@
 
 
 
-.banner-caio-tools figure.rht>span {
+.banner-caio-tools figure.rht>.tool-txt {
   left: auto;
   right: 0%;
   -webkit-transform: translateX(100%);
@@ -56,7 +56,7 @@
   transform: translateX(100%);
 }
 
-.banner-caio-tools figure.rht>span::before {
+.banner-caio-tools figure.rht>.tool-txt::before {
   left: 0;
   right: auto;
   border-left: 1px dashed var(--primary-color);
