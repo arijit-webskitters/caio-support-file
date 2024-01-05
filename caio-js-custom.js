@@ -422,9 +422,9 @@ Webflow.push(function () {
           const el = document.querySelector(".the-caio-sec");
           let heading = el.querySelector(".the-caio-big-txt"),
             img = el.querySelector(".the-caio-img-wpr"),
-            para = el.querySelector(".the-caio-txt-wpr>p"),
+            para = el.querySelector(".the-caio-txt-wpr p"),
             btn = el.querySelector(".btn-wpr"),
-            sunheadline = el.querySelector(".the-caio-subtxt>p"),
+            sunheadline = el.querySelector(".the-caio-subtxt p"),
             items = el.querySelector(".the-caio_grid_box");
     
           gsap.set(heading, { opacity: 0, letterSpacing: "-0.1em" });
