@@ -118,6 +118,9 @@ Webflow.push(function () {
     invalidateOnRefresh: true,
     scrub: 1.3,
     // markers: true,
+      
+    onEnter:()=>ScrollTrigger.refresh(),
+    onLeave:()=>ScrollTrigger.refresh()
   });
 
   ScrollTrigger.create({
@@ -128,9 +131,6 @@ Webflow.push(function () {
     pin: true,
     // markers: true,
 
-      
-    onEnter:()=>ScrollTrigger.refresh(),
-    onLeave:()=>ScrollTrigger.refresh()
   });
 }
 
