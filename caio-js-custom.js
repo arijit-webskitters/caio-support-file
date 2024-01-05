@@ -8,10 +8,6 @@ Webflow.push(function () {
     
     function page_anim() {
 
-        setTimeout(function(){
-            ScrollTrigger.refresh()
-        }, 300)
-
         if ($(".the-caio-sec").length) {
   let caioTl = gsap.timeline();
   const el = document.querySelector(".the-caio-sec");
@@ -124,7 +120,7 @@ Webflow.push(function () {
     scrub: 1.3,
     // markers: true,
       
-    //onLeave:()=>ScrollTrigger.refresh()
+    onLeave:()=>ScrollTrigger.refresh()
   });
 
   ScrollTrigger.create({
