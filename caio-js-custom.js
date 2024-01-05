@@ -5,7 +5,12 @@ Webflow.push(function () {
     window.history.scrollRestoration = "manual";
     ScrollTrigger.clearScrollMemory();
     window.scrollTo(0, 0);
+    
     function page_anim() {
+
+        setTimeout(function(){
+            ScrollTrigger.refresh()
+        }, 100)
 
         if ($(".the-caio-sec").length) {
   let caioTl = gsap.timeline();
@@ -119,7 +124,7 @@ Webflow.push(function () {
     scrub: 1.3,
     // markers: true,
       
-    onLeave:()=>ScrollTrigger.refresh()
+    //onLeave:()=>ScrollTrigger.refresh()
   });
 
   ScrollTrigger.create({
