@@ -336,7 +336,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  padding-left: 50%;
 }
 
 .the-caio_grid_row {
@@ -344,10 +343,4 @@
   position: relative;
 }
 
-.the-caio_item {
-  padding: 20px;
-  background: red;
-  border-radius: 10px;
-  margin: 10px 0;
-}
 
