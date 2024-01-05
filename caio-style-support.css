@@ -29,6 +29,7 @@
 
 .reveal_outer .reveal section {
     height: 100vh;
+    padding: 150px 0 50px;
 }
 
 .reveal_outer .slides>section {
