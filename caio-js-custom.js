@@ -127,6 +127,10 @@ Webflow.push(function () {
     invalidateOnRefresh: true,
     pin: true,
     // markers: true,
+
+      
+    onEnter:()=>ScrollTrigger.refresh(),
+    onLeave:()=>ScrollTrigger.refresh()
   });
 }
 
