@@ -6,387 +6,386 @@ Webflow.push(function () {
   ScrollTrigger.clearScrollMemory();
   window.scrollTo(0, 0);
 
-  function page_anim() {
+  if ($(".the-caio-sec").length) {
+    let caioTl = gsap.timeline();
+    const el = document.querySelector(".the-caio-sec");
+    let heading = el.querySelector(".the-caio-big-txt"),
+      img = el.querySelector(".the-caio-img-wpr"),
+      para = el.querySelector(".the-caio-txt-wpr p"),
+      btn = el.querySelector(".btn-wpr"),
+      sunheadline = el.querySelector(".the-caio-subtxt p"),
+      items = el.querySelector(".the-caio_grid_box");
 
-    if ($(".the-caio-sec").length) {
-      let caioTl = gsap.timeline();
-      const el = document.querySelector(".the-caio-sec");
-      let heading = el.querySelector(".the-caio-big-txt"),
-        img = el.querySelector(".the-caio-img-wpr"),
-        para = el.querySelector(".the-caio-txt-wpr p"),
-        btn = el.querySelector(".btn-wpr"),
-        sunheadline = el.querySelector(".the-caio-subtxt p"),
-        items = el.querySelector(".the-caio_grid_box");
+    gsap.set(heading, { opacity: 0, letterSpacing: "-0.1em" });
+    Splitting({ target: para, by: "chars" });
+    gsap.set(para, { opacity: 0 });
+    gsap.set(para.querySelectorAll(".word"), {
+      "will-change": "opacity",
+      opacity: 0.1,
+    });
+    gsap.set(img, { opacity: 0, yPercent: 25, scale: 0.7, rotate: -25 });
+    gsap.set(btn, { opacity: 0, yPercent: 100 });
+    gsap.set(sunheadline, { opacity: 0 });
+    gsap.set(items, { opacity: 0 });
+    gsap.set(items.querySelectorAll(".the-caio_item"), {
+      opacity: 0,
+      yPercent: 100,
+    });
+    let itemTl = gsap.timeline();
+    itemTl
+      .fromTo(
+        items.querySelectorAll(".the-caio_item"),
+        { opacity: 0, yPercent: 100 },
+        {
+          opacity: 1,
+          yPercent: 0,
+          stagger: 0.1,
+        }
+      )
+      .pause();
 
-      gsap.set(heading, { opacity: 0, letterSpacing: "-0.1em" });
-      Splitting({ target: para, by: "chars" });
-      gsap.set(para, { opacity: 0 });
-      gsap.set(para.querySelectorAll(".word"), {
-        "will-change": "opacity",
-        opacity: 0.1,
-      });
-      gsap.set(img, { opacity: 0, yPercent: 25, scale: 0.7, rotate: -25 });
-      gsap.set(btn, { opacity: 0, yPercent: 100 });
-      gsap.set(sunheadline, { opacity: 0 });
-      gsap.set(items, { opacity: 0 });
-      gsap.set(items.querySelectorAll(".the-caio_item"), {
+    caioTl
+      .to(heading, {
+        duration: 0.5,
+        letterSpacing: "-0.05em",
+        opacity: 1,
+      })
+      .to(
+        img,
+        {
+          duration: 1,
+          opacity: 1,
+          yPercent: 0,
+        },
+        "<"
+      )
+      .set(para, { opacity: 1 }, "<")
+      .to(
+        para.querySelectorAll(".word"),
+        {
+          ease: "none",
+          duration: 0.3,
+          opacity: 1,
+          stagger: 0.01,
+        },
+        "<"
+      )
+      .to(btn, { delay: 0.5, duration: 0.3, opacity: 1, yPercent: 0 }, "<")
+      .to(heading, {
+        delay: 0.1,
+        duration: 0.5,
         opacity: 0,
-        yPercent: 100,
-      });
-      let itemTl = gsap.timeline();
-      itemTl
-        .fromTo(
-          items.querySelectorAll(".the-caio_item"),
-          { opacity: 0, yPercent: 100 },
-          {
-            opacity: 1,
-            yPercent: 0,
-            stagger: 0.1,
-          }
-        )
-        .pause();
+        letterSpacing: "-0.1em",
+      })
+      .to([para, btn], { duration: 0.5, opacity: 0, yPercent: 25 }, "<")
+      .to(
+        img,
+        { duration: 1, yPercent: 0, xPercent: 50, scale: 1, rotate: 0 },
+        "-=0.3"
+      )
+      .to(sunheadline, { duration: 0.5, opacity: 1 }, "-=0.3")
+      .to(sunheadline, { delay: 0.15, duration: 0.3, opacity: 0 })
+      .to(
+        img,
+        {
+          duration: 1,
+          yPercent: 0,
+          xPercent: -25,
+          scale: 0.8,
+          rotate: -45,
+          onEnd: () => itemTl.reverse(),
+        },
+        "<"
+      )
+      .to(items, {
+        opacity: 1,
+        onStart: () => itemTl.restart(),
+      }, "-=0.5");
 
-      caioTl
-        .to(heading, {
-          duration: 0.5,
-          letterSpacing: "-0.05em",
-          opacity: 1,
-        })
-        .to(
-          img,
-          {
+    caioTl.pause();
+
+    ScrollTrigger.create({
+      trigger: ".sec-cntnt",
+      start: "top 50%",
+      end: "+=300%",
+      animation: caioTl,
+      toggleActions: "play none play none",
+      invalidateOnRefresh: true,
+      scrub: 1.3,
+      // markers: true,
+    });
+
+    ScrollTrigger.create({
+      trigger: el,
+      start: "top -20%",
+      end: "+=250%",
+      invalidateOnRefresh: true,
+      pin: true,
+      // markers: true,
+    });
+  }
+
+  function page_anim() {
+    //title/paragraph text anim
+    if ($("[data-effect]").length) {
+      let el_effects = document.querySelectorAll("[data-effect]");
+      el_effects.forEach((t) => {
+        let Tl = gsap.timeline({
+          defaults: {
             duration: 1,
-            opacity: 1,
-            yPercent: 0,
           },
-          "<"
-        )
-        .set(para, { opacity: 1 }, "<")
-        .to(
-          para.querySelectorAll(".word"),
-          {
-            ease: "none",
-            duration: 0.3,
-            opacity: 1,
-            stagger: 0.01,
-          },
-          "<"
-        )
-        .to(btn, { delay: 0.5, duration: 0.3, opacity: 1, yPercent: 0 }, "<")
-        .to(heading, {
-          delay: 0.1,
-          duration: 0.5,
-          opacity: 0,
-          letterSpacing: "-0.1em",
-        })
-        .to([para, btn], { duration: 0.5, opacity: 0, yPercent: 25 }, "<")
-        .to(
-          img,
-          { duration: 1, yPercent: 0, xPercent: 50, scale: 1, rotate: 0 },
-          "-=0.3"
-        )
-        .to(sunheadline, { duration: 0.5, opacity: 1 }, "-=0.3")
-        .to(sunheadline, { delay: 0.15, duration: 0.3, opacity: 0 })
-        .to(
-          img,
-          {
-            duration: 1,
-            yPercent: 0,
-            xPercent: -25,
-            scale: 0.8,
-            rotate: -45,
-            onEnd: () => itemTl.reverse(),
-          },
-          "<"
-        )
-        .to(items, {
-          opacity: 1,
-          onStart: () => itemTl.restart(),
-        }, "-=0.5");
+        });
+        //   console.log(t.dataset.effect);
+        let pos = t.getBoundingClientRect();
 
-      caioTl.pause();
+        function animload() {
+        }
 
-      ScrollTrigger.create({
-        trigger: ".sec-cntnt",
-        start: "top 50%",
-        end: "+=300%",
-        animation: caioTl,
-        toggleActions: "play none play none",
-        invalidateOnRefresh: true,
-        scrub: 1.3,
-        // markers: true,
-      });
-
-      ScrollTrigger.create({
-        trigger: el,
-        start: "top -20%",
-        end: "+=250%",
-        invalidateOnRefresh: true,
-        pin: true,
-        // markers: true,
+        //set animation on section enter
+        ScrollTrigger.create({
+          trigger: t,
+          start: "top bottom",
+          onEnter: animload,
+          onEnterBack: animload,
+          once: true,
+          // markers:true,
+        });
       });
     }
 
-    setTimeout(() => {
-      //title/paragraph text anim
-      if ($("[data-effect]").length) {
-        let el_effects = document.querySelectorAll("[data-effect]");
-        el_effects.forEach((t) => {
-          let Tl = gsap.timeline({
-            defaults: {
-              duration: 1,
-            },
-          });
-          //   console.log(t.dataset.effect);
-          let pos = t.getBoundingClientRect();
-
-          function animload() {
-          }
-
-          //set animation on section enter
-          ScrollTrigger.create({
-            trigger: t,
-            start: "top bottom",
-            onEnter: animload,
-            onEnterBack: animload,
-            once: true,
-            // markers:true,
-          });
+    //position anim -from
+    if ($("[data-position]").length) {
+      let el_position = document.querySelectorAll("[data-position]");
+      el_position.forEach((t) => {
+        const pos = t.getBoundingClientRect();
+        gsap.set(t, { opacity: 0 });
+        let Tl = gsap.timeline({
+          defaults: {
+            repeatRefresh: true,
+            ease: "Power3.easeOut",
+            duration: 1.5,
+            stagger: 0.1,
+          },
         });
-      }
+        Tl.set(t, { opacity: 1 });
 
-      //position anim -from
-      if ($("[data-position]").length) {
-        let el_position = document.querySelectorAll("[data-position]");
-        el_position.forEach((t) => {
-          const pos = t.getBoundingClientRect();
-          gsap.set(t, { opacity: 0 });
-          let Tl = gsap.timeline({
-            defaults: {
-              repeatRefresh: true,
-              ease: "Power3.easeOut",
-              duration: 1.5,
-              stagger: 0.1,
-            },
-          });
-          Tl.set(t, { opacity: 1 });
-
-          if (pos.top > window.innerHeight) {
-            ScrollTrigger.create({
-              trigger: t,
-              start: "top 85%",
-              end: "bottom bottom",
-              animation: Tl,
-              toggleActions: "play none play none",
-              invalidateOnRefresh: true,
-              // scrub: 1.3,
-              // markers: true,
-            });
-          }
-
-          // console.log(t.dataset.position);
-          function animload() {
-            if (t.dataset.position == "left") {
-              Tl.fromTo(
-                t,
-                {
-                  "will-change": "opacity, transform",
-                  opacity: 0,
-                  xPercent: -100,
-                },
-                {
-                  opacity: 1,
-                  xPercent: 0,
-                  stagger: 0.06,
-                }
-              ).pause();
-            }
-            if (t.dataset.position == "right") {
-              Tl.fromTo(
-                t,
-                {
-                  "will-change": "opacity, transform",
-                  opacity: 0,
-                  xPercent: 100,
-                },
-                {
-                  opacity: 1,
-                  xPercent: 0,
-                  stagger: 0.06,
-                }
-              ).pause();
-            }
-            if (t.dataset.position == "top") {
-              Tl.fromTo(
-                t,
-                {
-                  "will-change": "opacity, transform",
-                  opacity: 0,
-                  yPercent: -100,
-                },
-                {
-                  opacity: 1,
-                  yPercent: 0,
-                  stagger: 0.06,
-                }
-              ).pause();
-            }
-            if (t.dataset.position == "bottom") {
-              Tl.fromTo(
-                t,
-                {
-                  "will-change": "opacity, transform",
-                  opacity: 0,
-                  yPercent: 100,
-                },
-                {
-                  opacity: 1,
-                  yPercent: 0,
-                  stagger: 0.06,
-                }
-              ).pause();
-            }
-            if (t.dataset.position == "scale") {
-              Tl.fromTo(
-                t,
-                {
-                  "will-change": "opacity, transform",
-                  opacity: 0,
-                  scale: 0,
-                },
-                {
-                  opacity: 1,
-                  scale: 1,
-                  stagger: 0.06,
-                }
-              ).pause();
-            }
-
-            if (pos.top < window.innerHeight) {
-              setTimeout(() => {
-                Tl.timeScale(0.5).play();
-              }, 1200);
-            }
-          }
-
-          //set animation on section enter
+        if (pos.top > window.innerHeight) {
           ScrollTrigger.create({
-            invalidateOnRefresh: true,
             trigger: t,
-            start: "top bottom",
-            onEnter: animload,
-            onEnterBack: animload,
-            once: true,
+            start: "top 85%",
+            end: "bottom bottom",
+            animation: Tl,
+            toggleActions: "play none play none",
+            invalidateOnRefresh: true,
+            // scrub: 1.3,
             // markers: true,
           });
+        }
+
+        // console.log(t.dataset.position);
+        function animload() {
+          if (t.dataset.position == "left") {
+            Tl.fromTo(
+              t,
+              {
+                "will-change": "opacity, transform",
+                opacity: 0,
+                xPercent: -100,
+              },
+              {
+                opacity: 1,
+                xPercent: 0,
+                stagger: 0.06,
+              }
+            ).pause();
+          }
+          if (t.dataset.position == "right") {
+            Tl.fromTo(
+              t,
+              {
+                "will-change": "opacity, transform",
+                opacity: 0,
+                xPercent: 100,
+              },
+              {
+                opacity: 1,
+                xPercent: 0,
+                stagger: 0.06,
+              }
+            ).pause();
+          }
+          if (t.dataset.position == "top") {
+            Tl.fromTo(
+              t,
+              {
+                "will-change": "opacity, transform",
+                opacity: 0,
+                yPercent: -100,
+              },
+              {
+                opacity: 1,
+                yPercent: 0,
+                stagger: 0.06,
+              }
+            ).pause();
+          }
+          if (t.dataset.position == "bottom") {
+            Tl.fromTo(
+              t,
+              {
+                "will-change": "opacity, transform",
+                opacity: 0,
+                yPercent: 100,
+              },
+              {
+                opacity: 1,
+                yPercent: 0,
+                stagger: 0.06,
+              }
+            ).pause();
+          }
+          if (t.dataset.position == "scale") {
+            Tl.fromTo(
+              t,
+              {
+                "will-change": "opacity, transform",
+                opacity: 0,
+                scale: 0,
+              },
+              {
+                opacity: 1,
+                scale: 1,
+                stagger: 0.06,
+              }
+            ).pause();
+          }
+
+          if (pos.top < window.innerHeight) {
+            setTimeout(() => {
+              Tl.timeScale(0.5).play();
+            }, 1200);
+          }
+        }
+
+        //set animation on section enter
+        ScrollTrigger.create({
+          invalidateOnRefresh: true,
+          trigger: t,
+          start: "top bottom",
+          onEnter: animload,
+          onEnterBack: animload,
+          once: true,
+          // markers: true,
         });
-      }
+      });
+    }
 
-      //parallax
-      if ($("[data-parallax]").length) {
-        const parallax_box = document.querySelectorAll("[data-parallax]");
+    //parallax
+    if ($("[data-parallax]").length) {
+      const parallax_box = document.querySelectorAll("[data-parallax]");
 
-        parallax_box.forEach(function (prel) {
-          const data = prel.dataset.parallax;
-          const parallax_el = prel.querySelectorAll("[data-speed]");
-          if (parallax_el.length > 0) {
-            parallax_el.forEach(function (el) {
-              let smoothVal =
-                Number(el.dataset.speed === 0 ? 1 : el.dataset.speed) * 100;
-              let topPos = el.getBoundingClientRect().top;
-              // console.log(topPos);
-              gsap.to(el, {
-                yPercent: () => -smoothVal,
-                ease: "none",
-                scrollTrigger: {
-                  start: () =>
-                    topPos > window.innerHeight ? "top bottom" : "top top",
-                  trigger: prel,
-                  scrub: 1.3,
-                  // markers: true,
-                },
-              });
+      parallax_box.forEach(function (prel) {
+        const data = prel.dataset.parallax;
+        const parallax_el = prel.querySelectorAll("[data-speed]");
+        if (parallax_el.length > 0) {
+          parallax_el.forEach(function (el) {
+            let smoothVal =
+              Number(el.dataset.speed === 0 ? 1 : el.dataset.speed) * 100;
+            let topPos = el.getBoundingClientRect().top;
+            // console.log(topPos);
+            gsap.to(el, {
+              yPercent: () => -smoothVal,
+              ease: "none",
+              scrollTrigger: {
+                start: () =>
+                  topPos > window.innerHeight ? "top bottom" : "top top",
+                trigger: prel,
+                scrub: 1.3,
+                // markers: true,
+              },
+            });
+          });
+        } else {
+          let elPos = prel.getBoundingClientRect().top;
+          if (data == "scaleX") {
+            gsap.to(prel, {
+              transformOrigin: "left center",
+              xPercent: () => -15,
+              scaleX: () => 1.5,
+              ease: "none",
+              scrollTrigger: {
+                start: () =>
+                  elPos > window.innerHeight ? "top bottom" : "top top",
+                trigger: prel,
+                scrub: 1.5,
+                // markers: true,
+              },
+            });
+          } else if (data == "scale") {
+            gsap.to(prel, {
+              transformOrigin: "bottom center",
+              scale: () => 1.5,
+              ease: "none",
+              scrollTrigger: {
+                start: () =>
+                  elPos > window.innerHeight ? "top bottom" : "top top",
+                trigger: prel,
+                scrub: 1.5,
+                // markers: true,
+              },
             });
           } else {
-            let elPos = prel.getBoundingClientRect().top;
-            if (data == "scaleX") {
-              gsap.to(prel, {
-                transformOrigin: "left center",
-                xPercent: () => -15,
-                scaleX: () => 1.5,
-                ease: "none",
-                scrollTrigger: {
-                  start: () =>
-                    elPos > window.innerHeight ? "top bottom" : "top top",
-                  trigger: prel,
-                  scrub: 1.5,
-                  // markers: true,
-                },
-              });
-            } else if (data == "scale") {
-              gsap.to(prel, {
-                transformOrigin: "bottom center",
-                scale: () => 1.5,
-                ease: "none",
-                scrollTrigger: {
-                  start: () =>
-                    elPos > window.innerHeight ? "top bottom" : "top top",
-                  trigger: prel,
-                  scrub: 1.5,
-                  // markers: true,
-                },
-              });
-            } else {
-              gsap.to(prel, {
-                xPercent: -100,
-                ease: "none",
-                scrollTrigger: {
-                  start: () =>
-                    elPos > window.innerHeight ? "top 75%" : "top top",
-                  end: () => "bottom 30%",
-                  trigger: prel,
-                  scrub: 1.3,
-                  // markers: true,
-                },
-              });
-            }
+            gsap.to(prel, {
+              xPercent: -100,
+              ease: "none",
+              scrollTrigger: {
+                start: () =>
+                  elPos > window.innerHeight ? "top 75%" : "top top",
+                end: () => "bottom 30%",
+                trigger: prel,
+                scrub: 1.3,
+                // markers: true,
+              },
+            });
           }
-        });
-      }
+        }
+      });
+    }
 
-      if ($("[data-reveal]").length) {
-        const reveal_box = document.querySelectorAll("[data-reveal]");
-        reveal_box.forEach(function (revEl) {
-          let elPos = revEl.getBoundingClientRect().top;
-          ScrollTrigger.create({
-            invalidateOnRefresh: true,
-            start: () => (elPos > window.innerHeight ? "top 85%" : "top top"),
+    if ($("[data-reveal]").length) {
+      const reveal_box = document.querySelectorAll("[data-reveal]");
+      reveal_box.forEach(function (revEl) {
+        let elPos = revEl.getBoundingClientRect().top;
+        ScrollTrigger.create({
+          invalidateOnRefresh: true,
+          start: () => (elPos > window.innerHeight ? "top 85%" : "top top"),
+          trigger: revEl,
+          onEnter: () => revEl.classList.add("onViewport"),
+          onEnterBack: () => revEl.classList.add("onViewport"),
+          // markers: true,
+        });
+      });
+    }
+
+    if ($("[data-scroll]").length) {
+      const scroll_box = document.querySelectorAll("[data-scroll]");
+      scroll_box.forEach(function (revEl) {
+        const dataval = revEl.dataset.scroll;
+        gsap.to(revEl, {
+          x: () => (revEl.scrollWidth - window.innerWidth + (window.innerWidth > 991 ? 50 : 20)) * -1,
+          scrollTrigger: {
+            start: () => dataval == "center" ? "top 65%" : "top 70%",
+            end: () => dataval == "center" ? "bottom 45%" : "bottom 30%",
             trigger: revEl,
-            onEnter: () => revEl.classList.add("onViewport"),
-            onEnterBack: () => revEl.classList.add("onViewport"),
+            scrub: 1.3,
             // markers: true,
-          });
-        });
-      }
-
-      if ($("[data-scroll]").length) {
-        const scroll_box = document.querySelectorAll("[data-scroll]");
-        scroll_box.forEach(function (revEl) {
-          const dataval = revEl.dataset.scroll;
-          gsap.to(revEl, {
-            x: () => (revEl.scrollWidth - window.innerWidth + (window.innerWidth > 991 ? 50 : 20)) * -1,
-            scrollTrigger: {
-              start: () => dataval == "center" ? "top 65%" : "top 70%",
-              end: () => dataval == "center" ? "bottom 45%" : "bottom 30%",
-              trigger: revEl,
-              scrub: 1.3,
-              // markers: true,
-            },
-          })
-        });
-      }
-    }, 300);
+          },
+        })
+      });
+    }
   }
+
+
 
   //page loader
   if ($("#loader").length) {
