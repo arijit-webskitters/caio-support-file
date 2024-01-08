@@ -17,7 +17,7 @@ Webflow.push(function () {
       btn = el.querySelector(".the-caio-sec .btn-wpr"),
       subheadline = el.querySelector(".the-caio-subtxt1 p"),
       subheadline2 = el.querySelector(".the-caio-subtxt2 p"),
-      altImg = el.querySelector(".ps"),
+      //altImg = el.querySelector(".ps"),
       item = el.querySelector(".rv-section-rht-col");
 
     gsap.set(heading, { opacity: 0, letterSpacing: "-0.1em" });
@@ -33,12 +33,14 @@ Webflow.push(function () {
       opacity: 0,
       pointerEvents: "none",
     });
+              /*
     gsap.set(altImg, {
       opacity: 0,
       pointerEvents: "none",
       xPercent: -50,
       yPercent: 25,
     });
+    */
     gsap.set(item, { opacity: 0, pointerEvents: "none" });
 
     caioTl
@@ -99,7 +101,7 @@ Webflow.push(function () {
         pointerEvents: "none",
       })
       .to(img, { duration: 1, scale: 1.1 }, "-=1.3")
-      .to(img, {
+     /* .to(img, {
         duration: 0.3,
         scale: 0.5,
         yPercent: 5,
@@ -122,7 +124,27 @@ Webflow.push(function () {
       )
       .to(altImg, {
         opacity: 1,
+      })*/
+
+.to(img, {
+        duration: 0.3,
+        scale: 0.55,
+        yPercent: 0,
+        opacity: 1,
       })
+      .to(
+        item,
+        {
+          duration: 0.5,
+          opacity: 1,
+          pointerEvents: "all",
+        },
+        "-=0.3"
+      )
+      .to(img, {
+        opacity: 1,
+      })
+        
       .pause();
     ScrollTrigger.create({
       trigger: ".caio-sec-cntnt",
