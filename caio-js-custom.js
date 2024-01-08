@@ -146,7 +146,7 @@ Webflow.push(function () {
 
     ScrollTrigger.create({
       trigger: el,
-      start: "top -20%",
+      start: "top top",
       end: "+=250%",
       invalidateOnRefresh: true,
       pin: true,
