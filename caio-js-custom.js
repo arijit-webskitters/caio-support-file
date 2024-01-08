@@ -27,7 +27,7 @@ Webflow.push(function () {
       "will-change": "opacity",
       opacity: 0.1,
     });
-    gsap.set(img, { opacity: 0, yPercent: 25, scale: 0.7, rotate: -25 });
+    gsap.set(img, { opacity: 0, y: '7vw', scale: 0.7, rotate: -25 });
     gsap.set(btn, { opacity: 0, yPercent: 100 });
     gsap.set([subheadline, subheadline2], {
       opacity: 0,
@@ -54,7 +54,7 @@ Webflow.push(function () {
         {
           duration: 1,
           opacity: 1,
-          yPercent: 0,
+          y: '0vw',
         },
         "<"
       )
@@ -77,7 +77,7 @@ Webflow.push(function () {
         letterSpacing: "-0.1em",
       })
       .to([para, btn], { duration: 0.5, opacity: 0, yPercent: 25 }, "<")
-      .to(img, { duration: 0.6, yPercent: 0, xPercent: 39, rotate: 0 }, "-=0.3")
+      .to(img, { duration: 0.6, y: '0vw', xPercent: 39, rotate: 0 }, "-=0.3")
       .to(subheadline, {
         duration: 0.3,
         opacity: 1,
@@ -129,7 +129,7 @@ Webflow.push(function () {
 .to(img, {
         duration: 0.3,
         scale: 0.45,
-        yPercent: 18,
+        y: '8vw',
         opacity: 1,
       })
       .to(
