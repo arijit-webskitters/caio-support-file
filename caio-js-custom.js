@@ -8,133 +8,151 @@ Webflow.push(function () {
     
     function page_anim() {
 
-        if ($(".the-caio-sec").length) {
-  let caioTl = gsap.timeline();
-  const el = document.querySelector(".the-caio-sec");
-  let heading = el.querySelector(".the-caio-big-txt"),
-    img = el.querySelector(".the-caio-img-wpr"),
-    para = el.querySelector(".the-caio-txt-wpr p"),
-    btn = el.querySelector(".the-caio-sec .btn-wpr"),
-    sunheadline = el.querySelector(".the-caio-subtxt p"),
-    items = el.querySelector(".the-caio_grid_box");
+          if ($(".the-caio-sec").length) {
+    let caioTl = gsap.timeline();
+    const el = document.querySelector(".the-caio-sec");
+    let heading = el.querySelector(".the-caio-big-txt"),
+      img = el.querySelector(".the-caio-img-wpr"),
+      para = el.querySelector(".the-caio-txt-wpr p"),
+      btn = el.querySelector(".the-caio-sec .btn-wpr"),
+      subheadline = el.querySelector(".the-caio-subtxt1 p"),
+      subheadline2 = el.querySelector(".the-caio-subtxt2 p"),
+      altImg = el.querySelector(".ps"),
+      item = el.querySelector(".rv-section-rht-col");
 
-  gsap.set(heading, { opacity: 0, letterSpacing: "-0.1em" });
-  Splitting({ target: para, by: "chars" });
-  gsap.set(para, { opacity: 0 });
-  gsap.set(para.querySelectorAll(".word"), {
-    "will-change": "opacity",
-    opacity: 0.1,
-  });
-  gsap.set(img, { opacity: 0, yPercent: 25, scale: 0.7, rotate: -25 });
-  gsap.set(btn, { opacity: 0, yPercent: 100 });
-  gsap.set(sunheadline, { opacity: 0, pointerEvents: "none" });
-  gsap.set(items, { opacity: 0, pointerEvents: "none" });
-  gsap.set(items.querySelectorAll(".the-caio_item"), {
-    opacity: 0,
-    yPercent: 100,
-  });
-  let itemTl = gsap.timeline();
-  itemTl
-    .fromTo(
-      items.querySelectorAll(".the-caio_item"),
-      { opacity: 0, yPercent: 100 },
-      {
-        opacity: 1,
-        yPercent: 0,
-        stagger: 0.1,
-      }
-    )
-    .pause();
+    gsap.set(heading, { opacity: 0, letterSpacing: "-0.1em" });
+    Splitting({ target: para, by: "chars" });
+    gsap.set(para, { opacity: 0 });
+    gsap.set(para.querySelectorAll(".word"), {
+      "will-change": "opacity",
+      opacity: 0.1,
+    });
+    gsap.set(img, { opacity: 0, yPercent: 25, scale: 0.7, rotate: -25 });
+    gsap.set(btn, { opacity: 0, yPercent: 100 });
+    gsap.set([subheadline, subheadline2], {
+      opacity: 0,
+      pointerEvents: "none",
+    });
+    gsap.set(altImg, {
+      opacity: 0,
+      pointerEvents: "none",
+      xPercent: 0,
+      yPercent: 25,
+    });
+    gsap.set(item, { opacity: 0, pointerEvents: "none" });
 
-  caioTl
-    .to(heading, {
-      duration: 0.5,
-      letterSpacing: "-0.05em",
-      opacity: 1,
-    })
-    .to(
-      img,
-      {
-        duration: 1,
+    caioTl
+      .to(heading, {
+        duration: 0.5,
+        letterSpacing: "-0.05em",
         opacity: 1,
-        yPercent: 0,
-      },
-      "<"
-    )
-    .set(para, { opacity: 1 }, "<")
-    .to(
-      para.querySelectorAll(".word"),
-      {
-        ease: "none",
+      })
+      .to(
+        img,
+        {
+          duration: 1,
+          opacity: 1,
+          yPercent: 0,
+        },
+        "<"
+      )
+      .set(para, { opacity: 1 }, "<")
+      .to(
+        para.querySelectorAll(".word"),
+        {
+          ease: "none",
+          duration: 0.3,
+          opacity: 1,
+          stagger: 0.01,
+        },
+        "<"
+      )
+      .to(btn, { delay: 0.5, duration: 0.3, opacity: 1, yPercent: 0 }, "<")
+      .to(heading, {
+        delay: 0.1,
+        duration: 0.5,
+        opacity: 0,
+        letterSpacing: "-0.1em",
+      })
+      .to([para, btn], { duration: 0.5, opacity: 0, yPercent: 25 }, "<")
+      .to(img, { duration: 0.6, yPercent: 0, xPercent: 42, rotate: 0 }, "-=0.3")
+      .to(subheadline, {
         duration: 0.3,
         opacity: 1,
-        stagger: 0.01,
-      },
-      "<"
-    )
-    .to(btn, { delay: 0.5, duration: 0.3, opacity: 1, yPercent: 0 }, "<")
-    .to(heading, {
-      delay: 0.1,
-      duration: 0.5,
-      opacity: 0,
-      letterSpacing: "-0.1em",
-    })
-    .to([para, btn], { duration: 0.5, opacity: 0, yPercent: 25 }, "<")
-    .to(
-      img,
-      { duration: 1, yPercent: 0, xPercent: 42, scale: 1, rotate: 0 },
-      "-=0.3"
-    )
-    .to(sunheadline, { duration: 0.5, opacity: 1, pointerEvents: "all" }, "-=0.3")
-    .to(sunheadline, { delay: 0.15, duration: 0.3, opacity: 0, pointerEvents: "none" })
-    .to(
-      img,
-      {
-        duration: 1,
-        yPercent: -10,
-        xPercent: -25,
-        scale: 0.8,
-        rotate: -45,
-        onEnd: () => itemTl.reverse(),
-      },
-      "<"
-    )
-    .to(
-      items,
-      {
+        pointerEvents: "all",
+      })
+      .to(subheadline, {
+        delay: 0.15,
+        duration: 0.3,
+        opacity: 0,
+        pointerEvents: "none",
+      })
+      .to(subheadline2, {
+        duration: 0.3,
         opacity: 1,
-      pointerEvents: "all",
-        onStart: () => itemTl.restart(),
+        pointerEvents: "all",
+      })
+      .to(subheadline2, {
+        delay: 0.15,
+        duration: 0.3,
+        opacity: 0,
+        pointerEvents: "none",
+      })
+      .to(img, { duration: 1, scale: 1.1 }, "-=1.3")
+      .to(img, {
+        duration: 0.3,
+        scale: 0.5,
+        yPercent: 5,
+        opacity: 0,
+      })
+      .to(altImg, {
+        duration: 0.7,
+        yPercent: 0,
+        opacity: 1,
+        pointerEvents: "all",
+      })
+      .to(
+        item,
+        {
+          duration: 0.5,
+          opacity: 1,
+          pointerEvents: "all",
+        },
+        "-=0.3"
+      )
+      .to(altImg, {
+        opacity: 1,
+      })
+      .pause();
+    ScrollTrigger.create({
+      trigger: ".caio-sec-cntnt",
+      start: "top 50%",
+      end: "+=300%",
+      animation: caioTl,
+      toggleActions: "play none play none",
+      invalidateOnRefresh: true,
+      scrub: 1.3,
+      // markers: true,
+      onEnter: () => ScrollTrigger.refresh(),
+      onUpdate: (self) => {
+        console.log(self.progress);
+        if (self.progress > 0.87) {
+          $(".rv-section-rht-col").addClass("present");
+        } else {
+          $(".rv-section-rht-col").removeClass("present");
+        }
       },
-      "-=0.5"
-    );
+    });
 
-  caioTl.pause();
-
-  ScrollTrigger.create({
-    trigger: ".caio-sec-cntnt",
-    start: "top 50%",
-    end: "+=300%",
-    animation: caioTl,
-    toggleActions: "play none play none",
-    invalidateOnRefresh: true,
-    scrub: 1.3,
-    // markers: true,
-      
-    onEnter:()=>ScrollTrigger.refresh(),
-    //onLeave:()=>ScrollTrigger.refresh()
-  });
-
-  ScrollTrigger.create({
-    trigger: el,
-    start: "top -20%",
-    end: "+=250%",
-    invalidateOnRefresh: true,
-    pin: true,
-    // markers: true,
-
-  });
-}
+    ScrollTrigger.create({
+      trigger: el,
+      start: "top -20%",
+      end: "+=250%",
+      invalidateOnRefresh: true,
+      pin: true,
+      // markers: true,
+    });
+  }
 
         //title/paragraph text anim
         if ($("[data-effect]").length) {
