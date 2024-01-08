@@ -733,7 +733,7 @@
   width: 17px;
   height: 13px;
   border-top: 0;
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid #ff5f1f;
   top: 15%;
 }
 
