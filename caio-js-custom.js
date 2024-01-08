@@ -36,7 +36,7 @@ Webflow.push(function () {
     gsap.set(altImg, {
       opacity: 0,
       pointerEvents: "none",
-      xPercent: 0,
+      xPercent: -50,
       yPercent: 25,
     });
     gsap.set(item, { opacity: 0, pointerEvents: "none" });
