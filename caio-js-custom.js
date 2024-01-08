@@ -14,7 +14,7 @@ Webflow.push(function () {
   let heading = el.querySelector(".the-caio-big-txt"),
     img = el.querySelector(".the-caio-img-wpr"),
     para = el.querySelector(".the-caio-txt-wpr p"),
-    btn = el.querySelector(".btn-wpr"),
+    btn = el.querySelector(".the-caio-sec .btn-wpr"),
     sunheadline = el.querySelector(".the-caio-subtxt p"),
     items = el.querySelector(".the-caio_grid_box");
 
