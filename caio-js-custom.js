@@ -112,7 +112,7 @@ Webflow.push(function () {
   caioTl.pause();
 
   ScrollTrigger.create({
-    trigger: ".sec-cntnt",
+    trigger: ".caio-sec-cntnt",
     start: "top 50%",
     end: "+=300%",
     animation: caioTl,
