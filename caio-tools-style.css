@@ -776,3 +776,32 @@
   -o-transition-delay: 3.45s;
   transition-delay: 3.45s;
 }
+
+.ps {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rv-section-rht-col {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.banner-caio-tools {
+  width: 100%;
+  height: 500px;
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
