@@ -50,8 +50,8 @@
   position: absolute;
   top: 45%;
   right: 0;
-  border-top: 1px dashed var(--primary-color);
-  border-right: 1px dashed var(--primary-color);
+  border-top: 1px dashed #ff5f1f;
+  border-right: 1px dashed #ff5f1f;
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
@@ -60,7 +60,7 @@
 .banner-caio-tools figure.rht>.tool-txt::before {
   left: 0;
   right: auto;
-  border-left: 1px dashed var(--primary-color);
+  border-left: 1px dashed #ff5f1f;
   border-right: 0;
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
