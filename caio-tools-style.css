@@ -329,7 +329,7 @@
   left: -25%;
   bottom: 14%;
   width: 90%;
-  z-index: 1;
+  z-index: 2;
   -webkit-transform: translateY(115%);
   -ms-transform: translateY(115%);
   transform: translateY(115%);
