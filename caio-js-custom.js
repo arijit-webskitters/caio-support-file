@@ -76,7 +76,7 @@ Webflow.push(function () {
         opacity: 0,
         letterSpacing: "-0.1em",
       })
-      .to([para, btn], { duration: 0.5, opacity: 0, yPercent: 25 }, "<")
+      .to(para, { duration: 0.5, opacity: 0, yPercent: 25 }, "<")
       .to(img, { duration: 0.6, y: '0vw', xPercent: 39, rotate: 0 }, "-=0.3")
       .to(subheadline, {
         duration: 0.3,
