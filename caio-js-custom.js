@@ -5,7 +5,7 @@ Webflow.push(function () {
     window.history.scrollRestoration = "manual";
     ScrollTrigger.clearScrollMemory();
     window.scrollTo(0, 0);
-    
+    gsap.set(".ld2", { x: -70, opacity: 0 });
     function page_anim() {
 
           if ($(".the-caio-sec").length) {
