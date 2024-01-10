@@ -157,7 +157,7 @@ Webflow.push(function () {
       // markers: true,
       onEnter: () => ScrollTrigger.refresh(),
       onUpdate: (self) => {
-        console.log(self.progress);
+        //console.log(self.progress);
         if (self.progress > 0.87) {
           $(".rv-section-rht-col").addClass("present");
         } else {
