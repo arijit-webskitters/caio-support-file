@@ -174,7 +174,7 @@ Webflow.push(function () {
       pin: true,
       // markers: true,
     });
-  }
+  };
 
         //title/paragraph text anim
         if ($("[data-effect]").length) {
