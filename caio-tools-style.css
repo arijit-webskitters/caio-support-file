@@ -935,6 +935,11 @@
         width: 30%;
     }
 
+       .rv-section-rht-col.present .banner-caio-tools figure.rht ,
+    .banner-caio-tools figure.rht {
+        left: auto;
+    }
+
      .rv-section-rht-col.present .banner-caio-tools figure:nth-child(2) ,
     .banner-caio-tools figure:nth-child(2) {
         width: 34%;
