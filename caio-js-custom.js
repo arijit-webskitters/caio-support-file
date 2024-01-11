@@ -130,7 +130,8 @@ Webflow.push(function () {
 .to(img, {
         duration: 0.3,
         scale: 0.45,
-        y: '8vw',
+        // y: '8vw',
+        y: (window.innerWidth > 767 ? '8vw' : '18vw'),
         opacity: 1,
       })
       .to(
