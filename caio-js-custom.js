@@ -77,7 +77,7 @@ Webflow.push(function () {
       })
       .to([para, btn], { duration: 0.5, opacity: 0, yPercent: 25 }, "<")
       // .to(img, { duration: 0.6, y: '0vw', xPercent: 39, rotate: 0 }, "-=0.3")
-      .to(img, { duration: 0.6, y: '0vw', xPercent: (window.innerWidth > 767 ? 39 : 0), rotate: 0 }, "-=0.3")
+      .to(img, { duration: 0.6, y: (window.innerWidth > 767 ? '0vw' : '15vw'), xPercent: (window.innerWidth > 767 ? 39 : 0), rotate: 0 }, "-=0.3")
       .to(subheadline, {
         duration: 0.3,
         opacity: 1,
