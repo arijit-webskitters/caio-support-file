@@ -130,7 +130,7 @@ Webflow.push(function () {
         duration: 0.3,
         scale: 0.45,
         // y: '8vw',
-        y: (window.innerWidth > 767 ? '8vw' : '26vh'),
+        y: (window.innerWidth > 767 ? '8vw' : '30vh'),
         opacity: 1,
       })
       .to(
