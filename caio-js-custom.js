@@ -94,8 +94,7 @@ Webflow.push(function () {
               
           //     window.innerWidth > 767 ? '0vw' : '15vw'
           // ),
-          xPercent: ()=>{(window.innerWidth > 767 ? 39 : 0), rotate: 0 }
-      },
+          xPercent: ()=>{(window.innerWidth > 767 ? 39 : 0)}, rotate: 0},
           "-=0.3")
       .to(subheadline, {
         duration: 0.3,
