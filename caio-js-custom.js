@@ -87,7 +87,7 @@ Webflow.push(function () {
                       return "15vw";
                   }
                   else{
-                      return  "15vw";
+                      return  "25vw";
                   }
               },
           //     (
