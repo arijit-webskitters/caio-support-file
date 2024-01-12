@@ -94,7 +94,8 @@ Webflow.push(function () {
               
           //     window.innerWidth > 767 ? '0vw' : '15vw'
           // ),
-          xPercent: (window.innerWidth > 767 ? 39 : 0), rotate: 0 },
+          xPercent: ()=>{(window.innerWidth > 767 ? 39 : 0), rotate: 0 }
+      },
           "-=0.3")
       .to(subheadline, {
         duration: 0.3,
@@ -148,7 +149,7 @@ Webflow.push(function () {
         duration: 0.3,
         scale: 0.45,
         // y: '8vw',
-        y: (window.innerWidth > 767 ? '8vw' : '30vh'),
+        y: ()=>{(window.innerWidth > 767 ? '8vw' : '30vh')},
         opacity: 1,
       })
       .to(
