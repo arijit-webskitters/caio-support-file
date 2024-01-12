@@ -148,7 +148,19 @@ Webflow.push(function () {
         duration: 0.3,
         scale: 0.45,
         // y: '8vw',
-        y: ()=>{(window.innerWidth > 767 ? '8vw' : '30vh')},
+        y: 
+            ()=>{
+                  if(window.innerWidth > 767 ){
+                      return "8vw";
+                  }
+                  else if (window.innerWidth > 479 && window.innerWidth < 768) {
+                      return "30vh";
+                  }
+                  else{
+                      return  "29vh";
+                  }
+              },
+        // y: ()=>{(window.innerWidth > 767 ? '8vw' : '30vh')},
         opacity: 1,
       })
       .to(
