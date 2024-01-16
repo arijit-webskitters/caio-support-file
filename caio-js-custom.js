@@ -150,6 +150,7 @@ Webflow.push(function () {
         duration: 0.3,
         scale: 0.45,
         // y: '8vw',
+        x: (window.innerWidth > 575 ? 0 : 8),
         y: 
             ()=>{
                   if(window.innerWidth > 767 ){
