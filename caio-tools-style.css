@@ -21,6 +21,7 @@
 .banner-caio-tools figure> img {
     width: 100% !important;
     display: block !important;
+    z-index: 2;
 }
 
 .rv-section-rht-col.present .banner-caio-tools figure>.tool-txt ,
@@ -329,7 +330,7 @@
   left: -25%;
   bottom: 14%;
   width: 90%;
-  z-index: 2;
+  z-index: 3;
   -webkit-transform: translateY(115%);
   -ms-transform: translateY(115%);
   transform: translateY(115%);
@@ -385,7 +386,7 @@
   right: -32%;
   bottom: 10%;
   width: 90%;
-  z-index: 1;
+  z-index: 3;
   -webkit-transform: translateY(115%);
   -ms-transform: translateY(115%);
   transform: translateY(115%);
