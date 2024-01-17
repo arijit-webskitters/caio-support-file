@@ -812,7 +812,7 @@
 
 @media (max-width: 767px) {
 
-     .rv-section-rht-col.present .banner-caio-tools figure>.tool-txt>span ,
+     .rv-section-rht-col .banner-caio-tools figure>.tool-txt>span ,
     .rv-section .banner-caio-tools figure>.tool-txt>span {
         display: none;
     }
