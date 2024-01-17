@@ -819,6 +819,70 @@
     max-width: inherit;
 }
 
+@media (max-width: 991px) {
+  .banner-caio-tools figure:nth-child(8)>.tool-txt {
+    top: -26%;
+}
+
+.banner-caio-tools figure:nth-child(9)>.tool-txt::before {
+    width: 14px;
+}
+
+.banner-caio-tools figure:nth-child(10)>.tool-txt {
+    right: 4%;
+    top: 10%;
+}
+
+.banner-caio-tools figure:nth-child(10)>.tool-txt::before,
+.banner-caio-tools figure:nth-child(11)>.tool-txt::before,
+.banner-caio-tools figure:nth-child(13)>.tool-txt::before {
+    height: 0;
+}
+
+.banner-caio-tools figure:nth-child(11)>.tool-txt {
+    right: 4%;
+    top: 19%;
+}
+
+.banner-caio-tools figure:nth-child(12)>.tool-txt {
+    right: 10%;
+    top: 22%;
+    width: 100%;
+}
+
+.banner-caio-tools figure:nth-child(13)>.tool-txt {
+    right: 1%;
+    top: 33%;
+}
+
+.banner-caio-tools figure:nth-child(6)>.tool-txt::before {
+    width: 41px;
+}
+
+.banner-caio-tools figure:nth-child(9)>.tool-txt {
+    right: 0%;
+}
+
+.banner-caio-tools figure:nth-child(12)>.tool-txt::before {
+    height: 13px;
+}
+
+.banner-caio-tools figure:nth-child(14)>.tool-txt {
+    right: -2%;
+    top: 52%;
+}
+
+.banner-caio-tools figure:nth-child(15)>.tool-txt {
+    right: 5%;
+    top: 44%;
+}
+
+.banner-caio-tools figure:nth-child(14)>.tool-txt::before {
+    width: 21px;
+    height: 22px;
+    top: -17%;
+}
+}
 @media (max-width: 767px) {
 
      .rv-section-rht-col .banner-caio-tools figure>.tool-txt>span ,
