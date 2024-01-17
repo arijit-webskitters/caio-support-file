@@ -151,7 +151,7 @@ Webflow.push(function () {
         scale: 0.45,
         // y: '8vw',
         x: 
-            (window.innerWidth > 575 ? 0 : 8),
+            (window.innerWidth > 767 ? 0 : 8),
             // ()=>{
             //       if(window.innerWidth > 575 ){
             //           return 0;
