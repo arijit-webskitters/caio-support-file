@@ -814,6 +814,11 @@
   top: 0 !important;
 }
 
+.bnnr-smk-img-outer .bnnr-smk-img-wpr img {
+    width: 130%;
+    max-width: inherit;
+}
+
 @media (max-width: 767px) {
 
      .rv-section-rht-col .banner-caio-tools figure>.tool-txt>span ,
