@@ -810,6 +810,10 @@
   transition-delay: 3.45s;
 }
 
+.reveal.slide .slides>section {
+  top: 0 !important;
+}
+
 @media (max-width: 767px) {
 
      .rv-section-rht-col .banner-caio-tools figure>.tool-txt>span ,
