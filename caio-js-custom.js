@@ -52,7 +52,7 @@ Webflow.push(function () {
     */
     gsap.set(item, { opacity: 0, pointerEvents: "none" });
     gsap.set(headingMob, { opacity: 0, y: 50 });
-    gsap.set(imgMob, { opacity: 0, y: 50 });
+    gsap.set(imgMob, { opacity: 0, y: -150 });
               
 
     caioTl
@@ -252,7 +252,7 @@ Webflow.push(function () {
                     .to(imgMob, {
                         opacity:1,
                         y: 0,
-                    }, "-=0.5")
+                    }, "-=0.2")
             }
   };
 
