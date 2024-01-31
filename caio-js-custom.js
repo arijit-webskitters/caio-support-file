@@ -13,6 +13,7 @@ Webflow.push(function () {
     let heading = el.querySelector(".the-caio-big-txt"),
         headingMob=  el.querySelector(".the-caio-mob-txt"),
       img = el.querySelector(".the-caio-img-wpr"),
+      imgMob = el.querySelector(".the-caio-img"),
       para = el.querySelector(".the-caio-txt-wpr p"),
       btn = el.querySelector(".the-caio-sec .btn-wpr"),
       subheadline = el.querySelector(".the-caio-subtxt1 p"),
@@ -51,6 +52,8 @@ Webflow.push(function () {
     */
     gsap.set(item, { opacity: 0, pointerEvents: "none" });
     gsap.set(headingMob, { opacity: 0, y: 50 });
+    gsap.set(imgMob, { opacity: 0, y: 50 });
+              
 
     caioTl
       .to(heading, {
@@ -235,21 +238,21 @@ Webflow.push(function () {
               
 
             if($(window).width()<768){
-                let caioTlMob = gsap.timeline();
+                let caioTlMob = gsap.timeline({
+                    defaults: {
+                        duration: 1.5,
+                        delay: 2.5,
+                        ease: "none",
+                    },
+                });
                 caioTlMob.to(headingMob, {
                     opacity:1,
                     y: 0,
-                    duration: 2,
-                    delay: 5,
-                    ease: "none",
-                    /*scrollTrigger: {
-                        trigger: headingMob,
-                        start: "top 80%",
-                        end: "top 80%",
-                        // invalidateOnRefresh: true,
-                        markers: true,
-                    }*/
                 })
+                    .to(imgMob, {
+                    opacity:1,
+                    y: 0,
+                }, "-=0.5")
             }
   };
 
