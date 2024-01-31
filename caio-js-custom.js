@@ -239,9 +239,10 @@ Webflow.push(function () {
         caioTlMob.to(headingMob, {
             opacity:1,
             duration: 2,
+            delay: 5,
             ease: "none",
             scrollTrigger: {
-                trigger: ".caio-sec-cntnt",
+                trigger: headingMob,
                 start: "top 80%",
                 invalidateOnRefresh: true,
             }
