@@ -241,18 +241,18 @@ Webflow.push(function () {
                 let caioTlMob = gsap.timeline({
                     defaults: {
                         duration: 1.5,
-                        delay: 2.5,
                         ease: "none",
                     },
                 });
                 caioTlMob.to(headingMob, {
                     opacity:1,
                     y: 0,
+                    delay: 2.5,
                 })
                     .to(imgMob, {
-                    opacity:1,
-                    y: 0,
-                }, "-=0.5")
+                        opacity:1,
+                        y: 0,
+                    }, "-=0.5")
             }
   };
 
