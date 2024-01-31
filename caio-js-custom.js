@@ -238,7 +238,9 @@ Webflow.push(function () {
                 let caioTlMob = gsap.timeline();
                 caioTlMob.to(headingMob, {
                     opacity:1,
+                    y: 0,
                     duration: 2,
+                    delay: 5,
                     ease: "none",
                     /*scrollTrigger: {
                         trigger: headingMob,
