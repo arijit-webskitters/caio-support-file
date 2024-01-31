@@ -19,7 +19,9 @@ Webflow.push(function () {
       //altImg = el.querySelector(".ps"),
       item = el.querySelector(".rv-section-rht-col");
 
-    gsap.set(heading, { opacity: 0, letterSpacing: "-0.1em" });
+    gsap.set(heading, { 
+        opacity: (window.innerWidth > 767 ? 0 : 1), 
+        letterSpacing: "-0.1em" });
     Splitting({ target: para, by: "chars" });
     gsap.set(para, { opacity: 0 });
     gsap.set(para.querySelectorAll(".word"), {
