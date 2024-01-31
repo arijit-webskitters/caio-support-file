@@ -138,7 +138,7 @@ Webflow.push(function () {
       })
       .to(img, { 
           duration: 1, 
-          scale: (window.innerWidth > 767 ? 0.9 : 1),
+          scale: (window.innerWidth > 767 ? 0.75 : 1),
       }, "-=1.3")
      /* .to(img, {
         duration: 0.3,
