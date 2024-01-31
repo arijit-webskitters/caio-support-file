@@ -151,7 +151,7 @@ Webflow.push(function () {
         scale: 0.4,
         // y: '8vw',
         x: 
-            (window.innerWidth > 767 ? 0 : 6),
+            (window.innerWidth > 767 ? 0 : 8),
             // ()=>{
             //       if(window.innerWidth > 575 ){
             //           return 0;
@@ -166,7 +166,7 @@ Webflow.push(function () {
         y: 
             ()=>{
                   if(window.innerWidth > 767 ){
-                      return "8vw";
+                      return "6vw";
                   }
                   else if (window.innerWidth > 479 && window.innerWidth < 768) {
                       return "30vh";
