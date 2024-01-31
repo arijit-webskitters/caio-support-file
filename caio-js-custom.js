@@ -46,6 +46,7 @@ Webflow.push(function () {
       .to(heading, {
         duration: 0.5,
         letterSpacing: (window.innerWidth > 767 ? "-0.05em" : '0em'),
+        yPercent: (window.innerWidth > 767 ? -50 : -20),
         opacity: 1,
       })
       .to(
