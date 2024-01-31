@@ -136,7 +136,10 @@ Webflow.push(function () {
         opacity: 0,
         pointerEvents: "none",
       })
-      .to(img, { duration: 1, scale: 0.9 }, "-=1.3")
+      .to(img, { 
+          duration: 1, 
+          scale: (window.innerWidth > 767 ? 0.9 : 1),
+      }, "-=1.3")
      /* .to(img, {
         duration: 0.3,
         scale: 0.5,
