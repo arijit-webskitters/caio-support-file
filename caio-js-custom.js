@@ -71,7 +71,7 @@ Webflow.push(function () {
         },
         "<"
       )
-      .set(cntntHdng, { opacity: 1, y:0 }, "<")
+      .to(cntntHdng, { opacity: 1, y:0 }, "<")
       .set(para, { opacity: 1 }, "<")
       .to(
         para.querySelectorAll(".word"),
