@@ -211,7 +211,7 @@ Webflow.push(function () {
       invalidateOnRefresh: true,
       scrub: 1.3,
       // markers: true,
-      onEnter: () => ScrollTrigger.refresh(),
+      //onEnter: () => ScrollTrigger.refresh(),
       onUpdate: (self) => {
         //console.log(self.progress);
         if (self.progress > 0.87) {
