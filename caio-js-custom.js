@@ -27,7 +27,7 @@ Webflow.push(function () {
       opacity: 0.1,
     });
     gsap.set(img, { 
-        opacity: 0, 
+        opacity: (window.innerWidth > 767 ? 0 : 1), 
         x:(window.innerWidth > 767 ? "-4vw" : '-10vw'), 
         y: '7vw', 
         scale: (window.innerWidth > 767 ? 0.6 : 0.8), 
