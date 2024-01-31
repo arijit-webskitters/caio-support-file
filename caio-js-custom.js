@@ -51,8 +51,6 @@ Webflow.push(function () {
     });
     */
     gsap.set(item, { opacity: 0, pointerEvents: "none" });
-    gsap.set(headingMob, { opacity: 0, y: 50 });
-    gsap.set(imgMob, { opacity: 0, y: -150 });
               
 
     caioTl
@@ -237,23 +235,25 @@ Webflow.push(function () {
     });
               
 
-            if($(window).width()<768){
-                let caioTlMob = gsap.timeline({
-                    defaults: {
-                        duration: 1.5,
-                        ease: "none",
-                    },
-                });
-                caioTlMob.to(headingMob, {
-                    opacity:1,
-                    y: 0,
-                    delay: 2.5,
-                })
-                    .to(imgMob, {
-                        opacity:1,
-                        y: 0,
-                    }, "-=0.2")
-            }
+    if($(window).width()<768){
+        gsap.set(headingMob, { opacity: 0, y: 50 });
+        gsap.set(imgMob, { opacity: 0, y: -150 });
+        let caioTlMob = gsap.timeline({
+            defaults: {
+                duration: 1.5,
+                ease: "none",
+            },
+        });
+        caioTlMob.to(headingMob, {
+            opacity:1,
+            y: 0,
+            delay: 2.5,
+        })
+            .to(imgMob, {
+                opacity:1,
+                y: 0,
+            }, "-=0.2")
+    }
   };
 
         //title/paragraph text anim
