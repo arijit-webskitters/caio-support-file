@@ -11,6 +11,7 @@ Webflow.push(function () {
     let caioTl = gsap.timeline();
     const el = document.querySelector(".the-caio-sec");
     let heading = el.querySelector(".the-caio-big-txt"),
+        headingMob=  el.querySelector(".the-caio-mob-txt"),
       img = el.querySelector(".the-caio-img-wpr"),
       para = el.querySelector(".the-caio-txt-wpr p"),
       btn = el.querySelector(".the-caio-sec .btn-wpr"),
@@ -49,6 +50,7 @@ Webflow.push(function () {
     });
     */
     gsap.set(item, { opacity: 0, pointerEvents: "none" });
+    gsap.set(headingMob, { opacity: 0, y: 50 });
 
     caioTl
       .to(heading, {
@@ -230,6 +232,21 @@ Webflow.push(function () {
       pin: true,
       // markers: true,
     });
+              
+
+    if($(window).width()<768){
+        let caioTlMob = gsap.timeline();
+        caioTlMob.to(headingMob, {
+            opacity:1,
+            duration: 2,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".caio-sec-cntnt",
+                start: "top 80%",
+                invalidateOnRefresh: true,
+            }
+        })
+    }
   };
 
         //title/paragraph text anim
