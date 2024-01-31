@@ -148,10 +148,10 @@ Webflow.push(function () {
 
 .to(img, {
         duration: 0.3,
-        scale: 0.45,
+        scale: 0.4,
         // y: '8vw',
         x: 
-            (window.innerWidth > 767 ? 0 : 8),
+            (window.innerWidth > 767 ? 0 : 6),
             // ()=>{
             //       if(window.innerWidth > 575 ){
             //           return 0;
