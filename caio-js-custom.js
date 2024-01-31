@@ -26,7 +26,7 @@ Webflow.push(function () {
       "will-change": "opacity",
       opacity: 0.1,
     });
-    gsap.set(img, { opacity: 0, y: '7vw', scale: 0.7, rotate: -25 });
+    gsap.set(img, { opacity: 0, y: '7vw', scale: 0.6, rotate: -25 });
     gsap.set(btn, { opacity: 0, yPercent: 100 });
     gsap.set([subheadline, subheadline2], {
       opacity: 0,
