@@ -240,13 +240,13 @@ Webflow.push(function () {
                     opacity:1,
                     duration: 2,
                     ease: "none",
-                    scrollTrigger: {
+                    /*scrollTrigger: {
                         trigger: headingMob,
                         start: "top 80%",
                         end: "top 80%",
                         // invalidateOnRefresh: true,
                         markers: true,
-                    }
+                    }*/
                 })
             }
   };
