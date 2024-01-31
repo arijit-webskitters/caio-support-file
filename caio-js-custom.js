@@ -234,21 +234,21 @@ Webflow.push(function () {
     });
               
 
-    if($(window).width()<768){
-        let caioTlMob = gsap.timeline();
-        caioTlMob.to(headingMob, {
-            opacity:1,
-            y: 0,
-            duration: 2,
-            delay: 5,
-            ease: "none",
-            scrollTrigger: {
-                trigger: headingMob,
-                start: "top 80%",
-                invalidateOnRefresh: true,
+            if($(window).width()<768){
+                let caioTlMob = gsap.timeline();
+                caioTlMob.to(headingMob, {
+                    opacity:1,
+                    duration: 2,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: headingMob,
+                        start: "top 80%",
+                        end: "top 80%",
+                        // invalidateOnRefresh: true,
+                        markers: true,
+                    }
+                })
             }
-        })
-    }
   };
 
         //title/paragraph text anim
