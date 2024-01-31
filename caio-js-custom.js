@@ -173,7 +173,7 @@ Webflow.push(function () {
                       return "30vh";
                   }
                   else{
-                      return  "29vh";
+                      return  "27vh";
                   }
               },
         // y: ()=>{(window.innerWidth > 767 ? '8vw' : '30vh')},
