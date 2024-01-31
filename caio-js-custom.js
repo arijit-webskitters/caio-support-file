@@ -14,7 +14,8 @@ Webflow.push(function () {
         headingMob=  el.querySelector(".the-caio-mob-txt"),
       img = el.querySelector(".the-caio-img-wpr"),
       imgMob = el.querySelector(".the-caio-img"),
-      para = el.querySelector(".the-caio-txt-wpr p"),
+      cntntHdng = el.querySelector(".the-caio-cntnt-hdng"),
+      para = el.querySelector(".the-caio-txt-wpr p"),        
       btn = el.querySelector(".the-caio-sec .btn-wpr"),
       subheadline = el.querySelector(".the-caio-subtxt1 p"),
       subheadline2 = el.querySelector(".the-caio-subtxt2 p"),
@@ -30,6 +31,7 @@ Webflow.push(function () {
       "will-change": "opacity",
       opacity: 0.1,
     });
+    gsap.set(cntntHdng, { opacity: 0, y: 50 });              
     gsap.set(img, { 
         opacity: (window.innerWidth > 767 ? 0 : 1), 
         x:(window.innerWidth > 767 ? "-4vw" : '-10vw'), 
@@ -69,6 +71,7 @@ Webflow.push(function () {
         },
         "<"
       )
+      .set(cntntHdng, { opacity: 1, y:0 }, "<")
       .set(para, { opacity: 1 }, "<")
       .to(
         para.querySelectorAll(".word"),
@@ -87,7 +90,7 @@ Webflow.push(function () {
         opacity: 0,
         letterSpacing: "-0.1em",
       })
-      .to([para, btn], { duration: 0.5, opacity: 0, yPercent: 25 }, "<")
+      .to([para, cntntHdng, btn], { duration: 0.5, opacity: 0, yPercent: 25 }, "<")
       // .to(img, { duration: 0.6, y: '0vw', xPercent: 39, rotate: 0 }, "-=0.3")
       .to(img, { 
           duration: 0.6,
