@@ -60,7 +60,7 @@ Webflow.push(function () {
         {
           duration: 1,
           opacity: 1,
-          y: '0vw',
+          y: (window.innerWidth > 767 ? '0vw' : '-20vw'),
         },
         "<"
       )
