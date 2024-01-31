@@ -26,7 +26,13 @@ Webflow.push(function () {
       "will-change": "opacity",
       opacity: 0.1,
     });
-    gsap.set(img, { opacity: 0, x:'-4vw', y: '7vw', scale: 0.6, rotate: -25 });
+    gsap.set(img, { 
+        opacity: 0, 
+        x:(window.innerWidth > 767 ? "-4vw" : '-10vw'), 
+        y: '7vw', 
+        scale: (window.innerWidth > 767 ? 0.6 : 0.8), 
+        rotate: -25 
+    });
     gsap.set(btn, { opacity: 0, yPercent: 100 });
     gsap.set([subheadline, subheadline2], {
       opacity: 0,
