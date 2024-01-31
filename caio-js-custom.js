@@ -45,7 +45,7 @@ Webflow.push(function () {
     caioTl
       .to(heading, {
         duration: 0.5,
-        letterSpacing: "-0.05em",
+        letterSpacing: (window.innerWidth > 767 ? "-0.05em" : '0em'),
         opacity: 1,
       })
       .to(
