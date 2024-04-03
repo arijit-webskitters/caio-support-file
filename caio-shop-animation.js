@@ -44,7 +44,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
         let dtlsCardTl = gsap.timeline();
 
         gsap.set(productToolLine, {
-            width: 0,
+            width: "0%",
         });
         if (eachCard.classList.contains('right')) {
             gsap.set(productToolHdng, {
@@ -58,7 +58,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
                 });
             })
         } else {
-            gsap.set(productToolLine, {
+            gsap.set(productToolHdng, {
                 opacity: 0,
                 x: -50,
             });
@@ -79,7 +79,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
                 x: 0,
                 opacity: 1,
                 ease: "none",
-                duration: 0.2,
+                duration: 0.3,
             }, "-=0.05")
             .to(productToolListLi, {
                 x: 0,
