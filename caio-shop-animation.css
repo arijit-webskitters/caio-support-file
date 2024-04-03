@@ -1,5 +1,4 @@
 .prdct-point-col:nth-child(odd) {
-    display: flex;
     justify-content: flex-end;
     text-align: right;
 }
