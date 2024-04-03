@@ -3,7 +3,7 @@
     text-align: right;
 }
 .prdct-point-col:nth-child(even) {
-    padding-top: 40px;
+    padding-top: 80px;
 }
 .prdct-point-col:nth-child(odd) .product-dscp-richtxt li {
     background-position: right 20px top 11px;
