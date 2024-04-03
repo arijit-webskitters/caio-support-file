@@ -10,3 +10,7 @@
     padding-left: 0;
     padding-right: 40px;
 }
+.product-point-card-line-wpr.right .product-point-card-line {
+    right: 0;
+    left: auto;
+}
