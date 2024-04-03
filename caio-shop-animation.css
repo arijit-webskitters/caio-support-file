@@ -1,6 +1,7 @@
-.prdct-point-col:nth-child(odd){
+.prdct-point-col:nth-child(odd) {
     display: flex;
     justify-content: flex-end;
+    text-align: right;
 }
 .prdct-point-col:nth-child(odd) .product-dscp-richtxt li {
     background-position: right 20px top 11px;
