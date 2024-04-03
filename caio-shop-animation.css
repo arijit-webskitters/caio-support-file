@@ -2,6 +2,26 @@
     justify-content: flex-end;
     text-align: right;
 }
+.prdct-point-col:last-child:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 3px;
+    height: calc(100% - 80px);
+    background-color: #000;
+    transform: translateX(50%);
+}
+.prdct-point-col:last-child:nth-child(even)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    height: calc(100% - 80px);
+    background-color: #000;
+    transform: translateX(-50%);
+}
 .prdct-point-col:nth-child(even) {
     padding-top: 80px;
 }
