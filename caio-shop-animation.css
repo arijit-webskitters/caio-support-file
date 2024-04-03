@@ -34,3 +34,16 @@
     right: 0;
     left: auto;
 }
+
+@media screen and (max-width: 991px) {
+    .prdct-point-col:nth-child(odd) .product-dscp-richtxt li {
+        background-position: right 10px top 10px;
+        padding-right: 30px;
+    }
+    .product-point-card {
+        padding-right: 0;
+    }
+    .product-point-card:nth-child(odd) {
+        padding-left: 0;
+    }
+}
