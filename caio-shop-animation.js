@@ -25,7 +25,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
     ScrollTrigger.create({
         trigger: product_dtls_row,
         start: "top 90%",
-        end: "bottom 60%",
+        end: "bottom 65%",
         animation: rowLineTl,
         scrub: 1,
         once: true,
@@ -99,7 +99,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
 
         ScrollTrigger.create({
             trigger: eachCard,
-            start: "top 80%",
+            start: "top 70%",
             // end: "bottom 100%",
             animation: dtlsCardTl,
             // scrub: 0.6,
