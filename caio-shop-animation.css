@@ -1,1 +1,9 @@
-
+.prdct-point-col:nth-child(odd){
+    display: flex;
+    justify-content: flex-end;
+}
+.prdct-point-col:nth-child(odd) .product-dscp-richtxt li {
+    background-position: right 20px top 11px;
+    padding-left: 0;
+    padding-right: 40px;
+}
