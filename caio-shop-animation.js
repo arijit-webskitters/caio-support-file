@@ -28,7 +28,8 @@ if ($(".prdct-dscp-dtls-wpr").length) {
         end: "bottom 70%",
         animation: rowLineTl,
         scrub: 1,
-        markers: true,
+        once: true,
+        //markers: true,
     });
 
 
