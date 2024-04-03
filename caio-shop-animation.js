@@ -1,36 +1,38 @@
 // Tokennomics Animation
 if ($(".prdct-dscp-dtls-wpr").length) {
-    let product_dtls_row = document.querySelector('.prdct-point-row');
-    let row_line = product_dtls_row.querySelector('.prdct-point-line'),
-        row_dot = product_dtls_row.querySelector('.prdct-point-dot');
-    let rowLineTl = gsap.timeline();
-
-    gsap.set(row_line, {
-        height: "0%",
+    let product_dtls_row = document.querySelectorAll('.prdct-point-row');
+    product_dtls_row.forEach(eachRow=>{
+        let row_line = eachRow.querySelector('.prdct-point-line'),
+            row_dot = eachRow.querySelector('.prdct-point-dot');
+        let rowLineTl = gsap.timeline();
+    
+        gsap.set(row_line, {
+            height: "0%",
+        })
+        gsap.set(row_dot, {
+            scale: 0,
+        })
+    
+        rowLineTl.to(row_dot, {
+            scale: 1,
+            duration: 0.05,
+        })
+            .to(row_line, {
+                ease: "none",
+                height: "100%",
+                // duration: 200,
+            },"<")
+        rowLineTl.pause();
+        ScrollTrigger.create({
+            trigger: eachRow,
+            start: "top 90%",
+            end: "bottom 80%",
+            animation: rowLineTl,
+            scrub: 1,
+            once: true,
+            //markers: true,
+        });
     })
-    gsap.set(row_dot, {
-        scale: 0,
-    })
-
-    rowLineTl.to(row_dot, {
-        scale: 1,
-        duration: 0.05,
-    })
-        .to(row_line, {
-            ease: "none",
-            height: "100%",
-            // duration: 200,
-        },"<")
-    rowLineTl.pause();
-    ScrollTrigger.create({
-        trigger: product_dtls_row,
-        start: "top 90%",
-        end: "bottom 65%",
-        animation: rowLineTl,
-        scrub: 1,
-        once: true,
-        //markers: true,
-    });
 
 
 
