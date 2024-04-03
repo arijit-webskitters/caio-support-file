@@ -5,10 +5,6 @@ if ($(".prdct-dscp-dtls-wpr").length) {
         row_dot = product_dtls_row.querySelector('.prdct-point-dot');
     let rowLineTl = gsap.timeline();
 
-
-
-
-
     gsap.set(row_line, {
         height: "0%",
     })
@@ -31,6 +27,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
         end: "bottom 100%",
         animation: rowLineTl,
         scrub: 0.6,
+        markers: true,
     });
 
 
