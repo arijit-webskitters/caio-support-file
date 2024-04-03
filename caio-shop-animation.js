@@ -17,13 +17,14 @@ if ($(".prdct-dscp-dtls-wpr").length) {
         duration: 0.05,
     })
         .to(row_line, {
+            ease: "none",
             height: "100%",
             // duration: 200,
-        })
+        },"<")
     rowLineTl.pause();
     ScrollTrigger.create({
         trigger: product_dtls_row,
-        start: "top 80%",
+        start: "top 90%",
         end: "bottom 50%",
         animation: rowLineTl,
         scrub: 1,
