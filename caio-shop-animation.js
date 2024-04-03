@@ -6,7 +6,6 @@ if ($(".prdct-dscp-dtls-wpr").length) {
     let rowLineTl = gsap.timeline();
 
 
-    let productPointcard = document.querySelectorAll('.product-point-card');
 
 
 
@@ -36,6 +35,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
 
 
 
+    let productPointcard = document.querySelectorAll('.product-point-card');
     productPointcard.forEach(eachCard => {
         let productToolLine = eachCard.querySelector('.product-point-card-line'),
             productToolHdng = eachCard.querySelector('.product-tool-hdng'),
@@ -73,20 +73,26 @@ if ($(".prdct-dscp-dtls-wpr").length) {
         dtlsCardTl.to(productToolLine, {
             width: "100%",
             ease: "none",
-            duration: 0.15,
+            duration: 0.3,
         })
             .to(productToolHdng, {
                 x: 0,
                 opacity: 1,
                 ease: "none",
                 duration: 0.3,
-            }, "-=0.05")
+            })
             .to(productToolListLi, {
                 x: 0,
                 opacity: 1,
+                stagger: {
+                    each: 0.3,
+                    onComplete() {
+                        //console.log(this.targets()[0]); // <= the current target
+                        this.targets()[0].classList.add("show")
+                    }
+                },
                 ease: "none",
                 duration: 0.15,
-                stagger: 0.1,
             })
 
         dtlsCardTl.pause();
