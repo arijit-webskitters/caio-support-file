@@ -47,3 +47,42 @@
         padding-left: 0;
     }
 }
+@media screen and (max-width: 767px) {
+    .prdct-point-col:nth-child(odd) {
+        justify-content: flex-start;
+        text-align: left;
+    }
+    .prdct-point-col:last-child:nth-child(odd)::before {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        right: auto;
+        left: 0;
+        width: 3px;
+        height: calc(100% - 65px);
+        background-color: #000;
+        transform: translateX(50%);
+    }
+    .prdct-point-col:last-child:nth-child(even)::after {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 3px;
+        height: calc(100% - 65px);
+        background-color: #000;
+        transform: translateX(-50%);
+    }
+    .prdct-point-col:nth-child(even) {
+        padding-top: 0;
+    }
+    .prdct-point-col:nth-child(odd) .product-dscp-richtxt li {
+        background-position: right 20px top 11px;
+        padding-left: 0;
+        padding-right: 40px;
+    }
+    .product-point-card-line-wpr.right .product-point-card-line {
+        right: auto;
+        left: 0;
+    }
+}
