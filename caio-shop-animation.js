@@ -16,7 +16,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
         scale: 1,
         duration: 0.2
     })
-    to(row_line, {
+    .to(row_line, {
         height: "100%",
     })
     rowLineTl.pause();
