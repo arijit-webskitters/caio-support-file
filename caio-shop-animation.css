@@ -40,10 +40,10 @@
         background-position: right 10px top 10px;
         padding-right: 30px;
     }
-    .product-point-card {
+    .prdct-point-col .product-point-card {
         padding-right: 0;
     }
-    .product-point-card:nth-child(odd) {
+    .prdct-point-col:nth-child(odd) .product-point-card {
         padding-left: 0;
     }
 }
