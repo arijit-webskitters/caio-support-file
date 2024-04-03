@@ -52,24 +52,14 @@
         justify-content: flex-start;
         text-align: left;
     }
-    .prdct-point-col:last-child:nth-child(odd)::before {
-        content: '';
-        position: absolute;
-        bottom: -30px;
-        right: auto;
-        left: 0;
-        width: 3px;
-        height: calc(100% - 65px);
-        background-color: #000;
-        transform: translateX(50%);
-    }
+    .prdct-point-col:last-child:nth-child(odd)::after,
     .prdct-point-col:last-child:nth-child(even)::after {
         content: '';
         position: absolute;
-        bottom: -30px;
-        left: 0;
+        top: 15px;
+        left: 1px;
         width: 3px;
-        height: calc(100% - 65px);
+        height: calc(100% + 20px);
         background-color: #000;
         transform: translateX(-50%);
     }
@@ -77,12 +67,17 @@
         padding-top: 0;
     }
     .prdct-point-col:nth-child(odd) .product-dscp-richtxt li {
-        background-position: right 20px top 11px;
-        padding-left: 0;
-        padding-right: 40px;
+        padding-right: 0;
+        background-position: 10px 7px;
+        padding-left: 30px;
+        font-size: 15px;
     }
     .product-point-card-line-wpr.right .product-point-card-line {
         right: auto;
         left: 0;
+    }
+    .prdct-point-col:nth-child(odd) .product-point-card {
+        padding-left: 50px;
+        padding-right: 0;
     }
 }
