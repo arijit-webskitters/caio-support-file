@@ -39,7 +39,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
     productPointcard.forEach(eachCard => {
         let productToolLine = eachCard.querySelector('.product-point-card-line'),
             productToolHdng = eachCard.querySelector('.product-tool-hdng'),
-            productToolListLi = eachCard.querySelectorAll('ul.list li');
+            productToolListLi = eachCard.querySelectorAll('.product-dscp-richtxt ul li');
 
         let dtlsCardTl = gsap.timeline();
 
