@@ -47,7 +47,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
         gsap.set(productToolLine, {
             width: "0%",
         });
-        if (eachCard.classList.contains('right')) {
+        if (eachCard.classList.contains('right') && window.innerWidth>767) {
             gsap.set(productToolHdng, {
                 opacity: 0,
                 x: 50,
