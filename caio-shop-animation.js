@@ -20,7 +20,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
         height: "100%",
     })
     rowLineTl.pause();
-    ScrollTrigger.careate({
+    ScrollTrigger.create({
         trigger: product_dtls_row,
         start: "top 80%",
         end: "bottom 100%",
