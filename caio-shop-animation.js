@@ -5,6 +5,11 @@ if ($(".prdct-dscp-dtls-wpr").length) {
         row_dot = product_dtls_row.querySelector('.prdct-point-dot');
     let rowLineTl = gsap.timeline();
 
+
+    let productPointcard = document.querySelectorAll('.product-point-card');
+
+
+
     gsap.set(row_line, {
         height: "0%",
     })
@@ -14,78 +19,86 @@ if ($(".prdct-dscp-dtls-wpr").length) {
 
     rowLineTl.to(row_dot, {
         scale: 1,
-        duration: 0.2
+        duration: 0.05,
     })
-    .to(row_line, {
-        height: "100%",
-    })
+        .to(row_line, {
+            height: "100%",
+            duration: 20,
+        })
     rowLineTl.pause();
     ScrollTrigger.create({
         trigger: product_dtls_row,
         start: "top 80%",
         end: "bottom 100%",
         animation: rowLineTl,
-        scrub: true,
-    })
-}
+        scrub: 0.6,
+    });
 
 
 
-if ($(".prdct-dscp-dtls-wprsss").length) {
-    tokenSecTl.from(tokenSec_circle1, {
-        //   delay: 1,
-        ease: "none",
-        duration: 0.3,
-        opacity: 0,
-    })
-        .from(tokenSec_circle2, {
-            ease: "none",
-            duration: 0.3,
-            opacity: 0,
-        })
-        .from(tokenSec_logo, {
-            ease: "none",
-            duration: 0.3,
-            scale: 0,
-        }, "-=0.1")
-        // .fromTo(".box", { opacity: 0 }, { opacity: 0.5, duration: 1 })
-        .to(tokenSec_leftPoint_each, {
+    productPointcard.forEach(eachCard => {
+        let productToolLine = eachCard.querySelector('.product-point-card-line'),
+            productToolHdng = eachCard.querySelector('.product-tool-hdng'),
+            productToolListLi = eachCard.querySelectorAll('ul.list li');
+
+        let dtlsCardTl = gsap.timeline();
+
+        gsap.set(productToolLine, {
+            width: 0,
+        });
+        if (eachCard.classList.contains('right')) {
+            gsap.set(productToolHdng, {
+                opacity: 0,
+                x: 50,
+            });
+            productToolListLi.forEach(eachLi => {
+                gsap.set(eachLi, {
+                    opacity: 0,
+                    x: 20,
+                });
+            })
+        } else {
+            gsap.set(productToolLine, {
+                opacity: 0,
+                x: -50,
+            });
+            productToolListLi.forEach(eachLi => {
+                gsap.set(eachLi, {
+                    opacity: 0,
+                    x: -20,
+                });
+            })
+        }
+
+        dtlsCardTl.to(productToolLine, {
+            width: "100%",
             ease: "none",
             duration: 0.15,
-            y: 0,
-            stagger: {
-                each: 0.3,
-                onComplete() {
-                    //console.log(this.targets()[0]); // <= the current target
-                    this.targets()[0].classList.add("show")
-                }
-            }
-
-        }, "-=0.1")
-        .to(benifitSec_right_box_each, {
-            ease: "none",
-            duration: 0.05,
-            y: 0,
-            stagger: {
-                each: 0.3,
-                onComplete() {
-                    //console.log(this.targets()[0]); // <= the current target
-                    this.targets()[0].classList.add("show")
-                }
-            }
-
-        }, "<")
-        .from(btnWpr, {
-            ease: "none",
-            duration: 0.3,
-            y: 0,
-            opacity: 0,
         })
+            .to(productToolHdng, {
+                x: 0,
+                opacity: 1,
+                ease: "none",
+                duration: 0.2,
+            }, "-=0.05")
+            .to(productToolListLi, {
+                x: 0,
+                opacity: 1,
+                ease: "none",
+                duration: 0.15,
+                stagger: 0.1,
+            })
 
-    ScrollTrigger.create({
-        trigger: product_dtls_row,
-        start: "top 90%",
-        animation: tokenSecTl,
+        dtlsCardTl.pause();
+
+
+        ScrollTrigger.create({
+            trigger: eachCard,
+            start: "top 80%",
+            // end: "bottom 100%",
+            animation: dtlsCardTl,
+            // scrub: 0.6,
+        });
     })
 
 }
