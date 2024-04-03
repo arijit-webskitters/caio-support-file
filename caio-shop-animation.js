@@ -22,7 +22,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
     })
         .to(row_line, {
             height: "100%",
-            duration: 20,
+            duration: 10,
         })
     rowLineTl.pause();
     ScrollTrigger.create({
