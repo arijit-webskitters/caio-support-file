@@ -48,11 +48,11 @@ if ($(".prdct-dscp-dtls-wpr").length) {
         gsap.set(productToolLine, {
             width: "0%",
         });
-        gsap.set(productToolImg, {
-            opacity: 0,
-            y: 20,
-        });
         if (eachCard.classList.contains('right') && window.innerWidth>767) {
+            gsap.set(productToolImg, {
+                opacity: 0,
+                x: 30,
+            });
             gsap.set(productToolHdng, {
                 opacity: 0,
                 x: 50,
@@ -64,6 +64,10 @@ if ($(".prdct-dscp-dtls-wpr").length) {
                 });
             })
         } else {
+            gsap.set(productToolImg, {
+                opacity: 0,
+                x: -30,
+            });
             gsap.set(productToolHdng, {
                 opacity: 0,
                 x: -50,
@@ -82,7 +86,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
             duration: 0.3,
         })
             .to(productToolImg, {
-                y: 0,
+                x: 0,
                 opacity: 1,
                 ease: "none",
                 duration: 0.5,
