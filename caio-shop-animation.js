@@ -39,7 +39,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
     let productPointcard = document.querySelectorAll('.product-point-card');
     productPointcard.forEach(eachCard => {
         let productToolLine = eachCard.querySelector('.product-point-card-line'),
-            productToolImg = eachCard.querySelector('.product-tool-img'),
+            productToolImg = eachCard.querySelector('.product-point-card-img-wpr'),
             productToolHdng = eachCard.querySelector('.product-tool-hdng'),
             productToolListLi = eachCard.querySelectorAll('.product-dscp-richtxt ul li');
 
