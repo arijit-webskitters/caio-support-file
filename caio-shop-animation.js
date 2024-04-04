@@ -1,4 +1,4 @@
-// Tokennomics Animation
+// Shop page Animation
 if ($(".prdct-dscp-dtls-wpr").length) {
     let product_dtls_row = document.querySelectorAll('.prdct-point-row');
     product_dtls_row.forEach(eachRow=>{
@@ -39,6 +39,7 @@ if ($(".prdct-dscp-dtls-wpr").length) {
     let productPointcard = document.querySelectorAll('.product-point-card');
     productPointcard.forEach(eachCard => {
         let productToolLine = eachCard.querySelector('.product-point-card-line'),
+            productToolImg = eachCard.querySelector('.product-tool-img'),
             productToolHdng = eachCard.querySelector('.product-tool-hdng'),
             productToolListLi = eachCard.querySelectorAll('.product-dscp-richtxt ul li');
 
@@ -46,6 +47,10 @@ if ($(".prdct-dscp-dtls-wpr").length) {
 
         gsap.set(productToolLine, {
             width: "0%",
+        });
+        gsap.set(productToolImg, {
+            opacity: 0,
+            y: 20,
         });
         if (eachCard.classList.contains('right') && window.innerWidth>767) {
             gsap.set(productToolHdng, {
@@ -76,12 +81,18 @@ if ($(".prdct-dscp-dtls-wpr").length) {
             ease: "none",
             duration: 0.3,
         })
+            .to(productToolImg, {
+                y: 0,
+                opacity: 1,
+                ease: "none",
+                duration: 0.5,
+            })
             .to(productToolHdng, {
                 x: 0,
                 opacity: 1,
                 ease: "none",
                 duration: 0.3,
-            })
+            },"-=50%")
             .to(productToolListLi, {
                 x: 0,
                 opacity: 1,
