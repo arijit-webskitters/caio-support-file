@@ -357,13 +357,13 @@ figure.tools-fig.rht.fig16 {
     -o-transition-delay: 3.65s;
     transition-delay: 3.65s;
 }
-figure.tools-fig.rht.fig16 .tool-txt::before {
+.rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig16 .tool-txt::before {
     width: 90px;
 }
-figure.tools-fig.rht.fig17 .tool-txt::before {
+.rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig17 .tool-txt::before {
     width: 34px;
 }
-figure.tools-fig.rht.fig17 .tool-txt::after {
+.rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig17 .tool-txt::after {
     content: '';
     position: absolute;
     top: 10px;
@@ -375,20 +375,28 @@ figure.tools-fig.rht.fig17 .tool-txt::after {
 }
 
 @media only screen and (max-width: 1399px){
-    figure.tools-fig.rht.fig17 .tool-txt::before {
+    .rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig17 .tool-txt::before {
         width: 40px;
     }
-    figure.tools-fig.rht.fig17 .tool-txt::after {
+    .rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig17 .tool-txt::after {
         height: 210px;
         transform: rotate(34deg);
     }
 }
 @media only screen and (max-width: 1399px){
-    figure.tools-fig.rht.fig17 .tool-txt::after {
+    .rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig17 .tool-txt::after {
         height: 190px;
         transform: rotate(32deg);
         top: 14px;
         left: -93px;
+    }
+}
+@media only screen and (max-width: 479px){
+    .rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig16 {
+        right: 30%;
+    }
+    .rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig17 {
+        display: none;
     }
 }
 
