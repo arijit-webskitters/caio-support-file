@@ -359,6 +359,16 @@ figure.tools-fig.rht.fig16 {
 figure.tools-fig.rht.fig16 .tool-txt::before {
     width: 90px;
 }
+figure.tools-fig.rht.fig17 .tool-txt::before {
+    width: 40px;
+}
+figure.tools-fig.rht.fig17 .tool-txt::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+}
 /* 22/04/2024 ED */
 
 
