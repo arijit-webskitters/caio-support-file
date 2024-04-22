@@ -348,9 +348,9 @@ figure.tools-fig.rht.fig16 {
 }
 .rv-section-rht-col.present .banner-caio-tools figure:nth-child(16)>.tool-txt {
     font-size: 10px;
-    -webkit-transition-delay: 4.05s;
-    -o-transition-delay: 4.05s;
-    transition-delay: 4.05s;
+    -webkit-transition-delay: 3.65s;
+    -o-transition-delay: 3.65s;
+    transition-delay: 3.65s;
 }
 figure.tools-fig.rht.fig16 .tool-txt::before {
     width: 90px;
