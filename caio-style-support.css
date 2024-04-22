@@ -341,4 +341,17 @@
   position: relative;
 }
 
+/* 22/04/2024 */
+figure.tools-fig.rht.fig16 {
+    bottom: 0%;
+    right: 12%;
+}
+figure.tools-fig.rht.fig16 .tool-txt {
+    font-size: 10px;
+}
+figure.tools-fig.rht.fig16 .tool-txt::before {
+    width: 90px;
+}
+/* 22/04/2024 ED */
+
 
