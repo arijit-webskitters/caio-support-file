@@ -363,16 +363,6 @@ figure.tools-fig.rht.fig16 .tool-txt::before {
 figure.tools-fig.rht.fig17 .tool-txt::before {
     width: 34px;
 }
-/*figure.tools-fig.rht.fig17 .tool-txt::after {
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: -101px;
-    width: 40px;
-    height: 225px;
-    border-left: 1px dashed #ff5f1f;
-    transform: rotate(33deg);
-}*/
 figure.tools-fig.rht.fig17 .tool-txt::after {
     content: '';
     position: absolute;
@@ -382,6 +372,16 @@ figure.tools-fig.rht.fig17 .tool-txt::after {
     height: 229px;
     border-left: 1px dashed #ff5f1f;
     transform: rotate(33deg);
+}
+
+@media only screen and (max-width: 1399px){
+    figure.tools-fig.rht.fig17 .tool-txt::before {
+        width: 40px;
+    }
+    figure.tools-fig.rht.fig17 .tool-txt::after {
+        height: 210px;
+        transform: rotate(34deg);
+    }
 }
 
 
