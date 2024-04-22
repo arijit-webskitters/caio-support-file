@@ -185,7 +185,7 @@ Webflow.push(function () {
         y: 
             ()=>{
                   if(window.innerWidth > 767 ){
-                      return "6vw";
+                      return "8vw";
                   }
                   else if (window.innerWidth > 479 && window.innerWidth < 768) {
                       return "30vh";
