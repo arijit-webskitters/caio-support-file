@@ -383,6 +383,14 @@ figure.tools-fig.rht.fig17 .tool-txt::after {
         transform: rotate(34deg);
     }
 }
+@media only screen and (max-width: 1399px){
+    figure.tools-fig.rht.fig17 .tool-txt::after {
+        height: 190px;
+        transform: rotate(32deg);
+        top: 14px;
+        left: -93px;
+    }
+}
 
 
 /* 22/04/2024 ED */
