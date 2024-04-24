@@ -374,6 +374,13 @@ figure.tools-fig.rht.fig16 {
     transform: rotate(33deg);
 }
 
+.the-caio-img-wpr.part-show .caio-large-container,
+.the-caio-img-wpr.part-show .caio-medium-container,
+.the-caio-img-wpr.part-show .caio-sticker {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media only screen and (max-width: 1399px){
     .rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig17 .tool-txt::before {
         width: 40px;
