@@ -378,7 +378,7 @@ figure.tools-fig.rht.fig16 {
 .the-caio-img-wpr.part-show .caio-medium-container,
 .the-caio-img-wpr.part-show .caio-sticker {
     opacity: 1 !important;
-    transform: translateY(0) scale(1.7, 1.7) !important;
+    transform: translate(-50%, 0) scale(1.7, 1.7) !important;
     transition-delay: 3.5s;
 }
 .the-caio-img-wpr.part-show.instant .caio-large-container,
