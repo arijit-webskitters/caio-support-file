@@ -223,7 +223,7 @@ Webflow.push(function () {
                 return "16vh";
             }
             else {
-                return "27vh";
+                return "14vh";
             }
         },
         scale: () => {
