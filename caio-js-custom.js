@@ -251,6 +251,11 @@ Webflow.push(function () {
         } else {
             $(".the-caio-img-wpr").removeClass("part-show");
         }
+        if (self.progress > 0.9) {
+            $(".the-caio-img-wpr").addClass("instant");
+        } else {
+            $(".the-caio-img-wpr").removeClass("instant");
+        }
       },
     });
 
