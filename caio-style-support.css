@@ -404,6 +404,24 @@ figure.tools-fig.rht.fig16 {
         left: -93px;
     }
 }
+@media only screen and (max-width: 767px){
+    .tools-fig.rht.fig17 {
+        top: -2%;
+        right: -3%;
+    }
+    .rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig17 .tool-txt::before {
+        width: 37px;
+    }
+    .rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig17 .tool-txt::after {
+        height: 140px;
+        top: 16px;
+        left: -80px;
+    }
+    figure.tools-fig.rht.fig16 {
+        bottom: 4%;
+        right: 2%;
+    }
+}
 @media only screen and (max-width: 479px){
     .rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig16 {
         right: 30%;
@@ -415,5 +433,3 @@ figure.tools-fig.rht.fig16 {
 
 
 /* 22/04/2024 ED */
-
-
