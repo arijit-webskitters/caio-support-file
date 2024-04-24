@@ -193,7 +193,7 @@ Webflow.push(function () {
                       return "8vw";
                   }
                   else if (window.innerWidth > 479 && window.innerWidth < 768) {
-                      return "30vh";
+                      return "34vh";
                   }
                   else{
                       return  "27vh";
@@ -220,13 +220,23 @@ Webflow.push(function () {
                 return "-2.5vw";
             }
             else if (window.innerWidth > 479 && window.innerWidth < 768) {
-                return "34vh";
+                return "16vh";
             }
             else {
                 return "27vh";
             }
         },
-        scale: (window.innerWidth > 767 ? 0.5 : 1),
+        scale: () => {
+            if (window.innerWidth > 767) {
+                return 0.5;
+            }
+            else if (window.innerWidth > 479 && window.innerWidth < 768) {
+                return 0.7;
+            }
+            else {
+                return 0.7;
+            }
+        },
     })        
       .pause();
     ScrollTrigger.create({
