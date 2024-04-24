@@ -257,16 +257,17 @@ Webflow.push(function () {
             $(".rv-section-rht-col").removeClass("present");
         }
         if (self.progress > 0.75 && self.progress <= 0.9) {
-            setTimeout(function(){
+            // setTimeout(function(){
                 $(".the-caio-img-wpr").addClass("part-show");                
-            },3500)
+                $(".the-caio-img-wpr").removeClass("instant");                
+            // },3500)
         } else if(self.progress>0.9) {
-            $(".the-caio-img-wpr").addClass("part-show");
+            $(".the-caio-img-wpr").addClass("instant");
         } else {
             $(".the-caio-img-wpr").removeClass("part-show");
-            setTimeout(function(){
-                $(".the-caio-img-wpr").removeClass("part-show");                
-            },3500)
+            // setTimeout(function(){
+            //     $(".the-caio-img-wpr").removeClass("part-show");                
+            // },3500)
         }
       },
     });
