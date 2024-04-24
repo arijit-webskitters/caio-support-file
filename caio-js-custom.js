@@ -256,7 +256,7 @@ Webflow.push(function () {
         } else {
             $(".rv-section-rht-col").removeClass("present");
         }
-        if (self.progress > 0.75 $$ self.progress <= 0.9) {
+        if (self.progress > 0.75 && self.progress <= 0.9) {
             setTimeout(function(){
                 $(".the-caio-img-wpr").addClass("part-show");                
             },3500)
