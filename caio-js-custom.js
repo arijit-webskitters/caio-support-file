@@ -226,13 +226,13 @@ Webflow.push(function () {
                 return "27vh";
             }
         },
-        scale: (window.innerWidth > 767 ? 0.8 : 1),
+        scale: (window.innerWidth > 767 ? 0.6 : 1),
     })        
       .pause();
     ScrollTrigger.create({
       trigger: ".caio-sec-cntnt",
       start: "top 70%",
-      end: "+=300%",
+      end: "+=400%",
       animation: caioTl,
       toggleActions: "play none play none",
       invalidateOnRefresh: true,
