@@ -251,10 +251,10 @@ Webflow.push(function () {
         } else {
             $(".the-caio-img-wpr").removeClass("part-show");
         }
-        if (self.progress > 0.9) {
-            $(".the-caio-img-wpr").addClass("instant");
+        if (self.progress > 0.75 && self.progress <= 0.9) {
+            $(".the-caio-img-wpr").addClass("delay");
         } else {
-            $(".the-caio-img-wpr").removeClass("instant");
+            $(".the-caio-img-wpr").removeClass("delay");
         }
       },
     });
