@@ -214,6 +214,9 @@ Webflow.push(function () {
       .to(img, {
         opacity: 1,
       })
+      .to(img, {
+        opacity: 1,
+      })
     .to(img, {
         y: () => {
             if (window.innerWidth > 767) {
