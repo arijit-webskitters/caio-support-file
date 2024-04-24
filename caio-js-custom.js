@@ -227,8 +227,7 @@ Webflow.push(function () {
             }
         },
         scale: (window.innerWidth > 767 ? 0.8 : 1),
-    });
-        
+    })        
       .pause();
     ScrollTrigger.create({
       trigger: ".caio-sec-cntnt",
