@@ -353,9 +353,9 @@ figure.tools-fig.rht.fig16 {
 .rv-section-rht-col.present .banner-caio-tools figure:nth-child(16)>.tool-txt,
 .rv-section-rht-col.present .banner-caio-tools figure:nth-child(17)>.tool-txt {
     font-size: 10px;
-    -webkit-transition-delay: 3.65s;
-    -o-transition-delay: 3.65s;
-    transition-delay: 3.65s;
+    -webkit-transition-delay: 3.85s;
+    -o-transition-delay: 3.85s;
+    transition-delay: 3.85s;
 }
 .rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig16 .tool-txt::before {
     width: 90px;
@@ -377,8 +377,9 @@ figure.tools-fig.rht.fig16 {
 .the-caio-img-wpr.part-show .caio-large-container,
 .the-caio-img-wpr.part-show .caio-medium-container,
 .the-caio-img-wpr.part-show .caio-sticker {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1 !important;
+    transform: translateY(0) scale(1.7, 1.7) !important;
+    transition-delay: 3.5s;
 }
 
 @media only screen and (max-width: 1399px){
