@@ -214,6 +214,20 @@ Webflow.push(function () {
       .to(img, {
         opacity: 1,
       })
+    .to(img, {
+        y: () => {
+            if (window.innerWidth > 767) {
+                return "-3vw";
+            }
+            else if (window.innerWidth > 479 && window.innerWidth < 768) {
+                return "30vh";
+            }
+            else {
+                return "27vh";
+            }
+        },
+        scale: (window.innerWidth > 767 ? 0.8 : 1),
+    });
         
       .pause();
     ScrollTrigger.create({
@@ -227,7 +241,7 @@ Webflow.push(function () {
       // markers: true,
       //onEnter: () => ScrollTrigger.refresh(),
       onUpdate: (self) => {
-        //console.log(self.progress);
+        console.log(self.progress);
         if (self.progress > 0.87) {
             $(".rv-section-rht-col").addClass("present");
             $(".the-caio-img-wpr").addClass("part-show");
