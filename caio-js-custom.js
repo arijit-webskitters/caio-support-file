@@ -13,6 +13,9 @@ Webflow.push(function () {
     let heading = el.querySelector(".the-caio-big-txt"),
         headingMob=  el.querySelector(".the-caio-mob-txt"),
       img = el.querySelector(".the-caio-img-wpr"),
+      largeContainer = el.querySelector(".caio-large-container"),
+      mdmContainer = el.querySelector(".caio-medium-container"),
+      caioSticker = el.querySelector(".caio-sticker"),
       imgMob = el.querySelector(".the-caio-img"),
       cntntHdng = el.querySelector(".the-caio-cntnt-hdng"),
       para = el.querySelector(".the-caio-txt-wpr p"),        
@@ -27,6 +30,8 @@ Webflow.push(function () {
         letterSpacing: "-0.1em" });
     Splitting({ target: para, by: "chars" });
     gsap.set(para, { opacity: 0 });
+    gsap.set([largeContainer,caioSticker], { opacity: 0, y: -30, });
+    gsap.set([mdmContainer], { opacity: 0, y: 30, });
     gsap.set(para.querySelectorAll(".word"), {
       "will-change": "opacity",
       opacity: 0.1,
