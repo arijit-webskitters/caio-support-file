@@ -241,7 +241,7 @@ Webflow.push(function () {
       //onEnter: () => ScrollTrigger.refresh(),
       onUpdate: (self) => {
         console.log(self.progress);
-        if (self.progress > 0.75 && <= 0.9) {
+        if (self.progress > 0.75 && self.progress <= 0.9) {
             $(".rv-section-rht-col").addClass("present");
         } else {
             $(".rv-section-rht-col").removeClass("present");
