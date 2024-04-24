@@ -217,7 +217,7 @@ Webflow.push(function () {
     .to(img, {
         y: () => {
             if (window.innerWidth > 767) {
-                return "-3vw";
+                return "-2.5vw";
             }
             else if (window.innerWidth > 479 && window.innerWidth < 768) {
                 return "30vh";
@@ -226,7 +226,7 @@ Webflow.push(function () {
                 return "27vh";
             }
         },
-        scale: (window.innerWidth > 767 ? 0.6 : 1),
+        scale: (window.innerWidth > 767 ? 0.5 : 1),
     })        
       .pause();
     ScrollTrigger.create({
