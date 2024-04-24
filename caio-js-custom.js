@@ -229,9 +229,11 @@ Webflow.push(function () {
       onUpdate: (self) => {
         //console.log(self.progress);
         if (self.progress > 0.87) {
-          $(".rv-section-rht-col").addClass("present");
+            $(".rv-section-rht-col").addClass("present");
+            $(".the-caio-img-wpr").addClass("part-show");
         } else {
-          $(".rv-section-rht-col").removeClass("present");
+            $(".rv-section-rht-col").removeClass("present");
+            $(".the-caio-img-wpr").removeClass("part-show");
         }
       },
     });
