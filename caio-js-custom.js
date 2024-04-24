@@ -220,7 +220,7 @@ Webflow.push(function () {
                 return "-2.5vw";
             }
             else if (window.innerWidth > 479 && window.innerWidth < 768) {
-                return "30vh";
+                return "34vh";
             }
             else {
                 return "27vh";
