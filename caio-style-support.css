@@ -374,6 +374,15 @@ figure.tools-fig.rht.fig16 {
     transform: rotate(33deg);
 }
 
+.the-caio-row {
+    position: relative;
+    z-index: 2;
+}
+
+.rv-section-rht-col.home-page {
+    z-index: 1;
+}
+
 .the-caio-img-wpr.part-show .caio-large-container,
 .the-caio-img-wpr.part-show .caio-medium-container,
 .the-caio-img-wpr.part-show .caio-sticker {
