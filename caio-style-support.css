@@ -381,11 +381,11 @@ figure.tools-fig.rht.fig16 {
     transform: translateY(0) scale(1.7, 1.7) !important;
     /*transition-delay: 3.5s;*/
 }
-.the-caio-img-wpr.part-show.delay .caio-large-container,
+/*.the-caio-img-wpr.part-show.delay .caio-large-container,
 .the-caio-img-wpr.part-show.delay .caio-medium-container,
 .the-caio-img-wpr.part-show.delay .caio-sticker {
     transition-delay: 3.5s;
-}
+}*/
 
 @media only screen and (max-width: 1399px){
     .rv-section-rht-col.present .banner-caio-tools figure.tools-fig.rht.fig17 .tool-txt::before {
