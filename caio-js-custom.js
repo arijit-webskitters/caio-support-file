@@ -256,16 +256,20 @@ Webflow.push(function () {
         } else {
             $(".rv-section-rht-col").removeClass("present");
         }
-        if (self.progress > 0.75) {
+        if (self.progress > 0.75 $$ self.progress <= 0.9) {
+            setTimeout(function(){
+                $(".the-caio-img-wpr").addClass("part-show");                
+            },3500)
+        } else if(self.progress>0.9) {
             $(".the-caio-img-wpr").addClass("part-show");
         } else {
             $(".the-caio-img-wpr").removeClass("part-show");
         }
-        if (self.progress > 0.75 && self.progress <= 0.9) {
-            $(".the-caio-img-wpr").addClass("delay");
-        } else {
-            $(".the-caio-img-wpr").removeClass("delay");
-        }
+        // if (self.progress > 0.75 && self.progress <= 0.9) {
+        //     $(".the-caio-img-wpr").addClass("delay");
+        // } else {
+        //     $(".the-caio-img-wpr").removeClass("delay");
+        // }
       },
     });
 
