@@ -276,7 +276,7 @@ Webflow.push(function () {
       //onEnter: () => ScrollTrigger.refresh(),
       onUpdate: (self) => {
         console.log(self.progress);
-        if (self.progress > 0.75 && self.progress <= 0.9) {
+        if (self.progress > 0.54 && self.progress <= 0.7) {
             $(".rv-section-rht-col").addClass("present");
             $(".the-caio-img-wpr").addClass("part-show");                
         } else {
