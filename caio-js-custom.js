@@ -220,7 +220,7 @@ Webflow.push(function () {
     .to(img, {
         y: () => {
             if (window.innerWidth > 767) {
-                return "-2.5vw";
+                return "-0.5vw";
             }
             else if (window.innerWidth > 479 && window.innerWidth < 768) {
                 return "16vh";
@@ -253,7 +253,7 @@ Webflow.push(function () {
       // markers: true,
       //onEnter: () => ScrollTrigger.refresh(),
       onUpdate: (self) => {
-        console.log(self.progress);
+        //console.log(self.progress);
         if (self.progress > 0.75 && self.progress <= 0.9) {
             $(".rv-section-rht-col").addClass("present");
             $(".the-caio-img-wpr").addClass("part-show");                
