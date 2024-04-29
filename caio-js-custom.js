@@ -289,7 +289,9 @@ Webflow.push(function () {
         opacity: 0,            
     },"<")
     .to(baseSlider,{
-        y: 0,
+        opacity: 0,            
+    })
+    .to(baseSlider,{
         opacity: 0,            
     })
     .set([topSliderAnimWpr], { 
