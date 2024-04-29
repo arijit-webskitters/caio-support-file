@@ -254,8 +254,6 @@ Webflow.push(function () {
                 return 0.7;
             }
         },
-    })
-    .to(img,{
         opacity: 0,            
     })
     .to(baseSticker,{
