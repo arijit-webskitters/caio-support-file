@@ -30,6 +30,7 @@ Webflow.push(function () {
         topLeftArrow = el.querySelector(".top-tool-arw-btn.left-arrow"),
       topRightArrow = el.querySelector(".top-tool-arw-btn.right-arrow"),
       topSlider = el.querySelector(".top-tool-slider"),
+      topSliderAnimWpr = el.querySelector(".top-slider-aniamtion-wpr"),
       //altImg = el.querySelector(".ps"),
       item = el.querySelector(".rv-section-rht-col");
 
@@ -57,6 +58,7 @@ Webflow.push(function () {
     gsap.set([baseLeftArrow,topLeftArrow], { opacity: 0, x: -50 });
     gsap.set([baseRightArrow,topRightArrow], { opacity: 0, x: 50 });
     gsap.set([baseSlider,topSlider], { opacity: 0, y: 70 });
+    gsap.set([topSliderAnimWpr], { opacity: 0, pointerEvents: "none" });
     gsap.set([subheadline, subheadline2], {
       opacity: 0,
       pointerEvents: "none",
@@ -270,14 +272,21 @@ Webflow.push(function () {
         y: 50,
         opacity: 0,            
     })
-    .to([baseLeftArrow,baseRightArrow],{
+    .to([baseLeftArrow],{
         y: -20,
+        opacity: 0,            
+    },"<")
+    .to([baseRightArrow],{
+        y: 20,
         opacity: 0,            
     },"<")
     .to([baseSlider],{
         y: 50,
         opacity: 0,            
     },"<")
+    .set([topSliderAnimWpr], { 
+        opacity: 1,
+        pointerEvents: "all" })
     .to(topSticker,{
         y: 0,
         opacity: 1,            
