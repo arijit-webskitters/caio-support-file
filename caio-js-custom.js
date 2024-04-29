@@ -22,6 +22,11 @@ Webflow.push(function () {
       btn = el.querySelector(".the-caio-sec .btn-wpr"),
       subheadline = el.querySelector(".the-caio-subtxt1 p"),
       subheadline2 = el.querySelector(".the-caio-subtxt2 p"),
+      baseSticker = el.querySelector(".caio-sticker-wpr"),
+      baseLeftArrow = el.querySelector(".base-tool-arw-btn.left-sticker"),
+      baseRightArrow = el.querySelector(".base-tool-arw-btn.right-sticker"),
+      baseSlider = el.querySelector(".base-tool-slider"),
+      topSlider = el.querySelector(".base-tool-slider"),
       //altImg = el.querySelector(".ps"),
       item = el.querySelector(".rv-section-rht-col");
 
@@ -45,6 +50,10 @@ Webflow.push(function () {
         rotate: -25 
     });
     gsap.set(btn, { opacity: 0, yPercent: 100 });
+    gsap.set(baseSticker, { opacity: 0, y: 50 });
+    gsap.set(baseLeftArrow, { opacity: 0, x: -50 });
+    gsap.set(baseRightArrow, { opacity: 0, x: 50 });
+    gsap.set(baseSlider, { opacity: 0, y: 70 });
     gsap.set([subheadline, subheadline2], {
       opacity: 0,
       pointerEvents: "none",
@@ -240,12 +249,25 @@ Webflow.push(function () {
                 return 0.7;
             }
         },
-    })        
+        opacity: 0,
+    })
+    .to(baseSticker,{
+        y: 0,
+        opacity: 1,            
+    },"-=30%")
+    .to([baseLeftArrow,baseRightArrow],{
+        x: 0,
+        opacity: 1,            
+    })
+    .to([baseSlider],{
+        y: 0,
+        opacity: 1,            
+    })
       .pause();
     ScrollTrigger.create({
       trigger: ".caio-sec-cntnt",
       start: "top 70%",
-      end: "+=400%",
+      end: "+=350%",
       animation: caioTl,
       toggleActions: "play none play none",
       invalidateOnRefresh: true,
@@ -253,7 +275,7 @@ Webflow.push(function () {
       // markers: true,
       //onEnter: () => ScrollTrigger.refresh(),
       onUpdate: (self) => {
-        //console.log(self.progress);
+        console.log(self.progress);
         if (self.progress > 0.75 && self.progress <= 0.9) {
             $(".rv-section-rht-col").addClass("present");
             $(".the-caio-img-wpr").addClass("part-show");                
