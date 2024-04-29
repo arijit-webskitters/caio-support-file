@@ -357,7 +357,7 @@ Webflow.push(function () {
             $(".rv-section-rht-col").removeClass("present");
             $(".the-caio-img-wpr").removeClass("part-show");                
         }
-        if (self.progress > 0.42 && self.progress <= 0.43) {
+        if (self.progress > 0.42 && self.progress <= 0.50) {
             disableScroll()
             setTimeout(function(){
                 enableScroll()              
