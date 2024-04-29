@@ -273,11 +273,11 @@ Webflow.push(function () {
         opacity: 0,            
     })
     .to([baseLeftArrow],{
-        y: -20,
+        x: -20,
         opacity: 0,            
     },"<")
     .to([baseRightArrow],{
-        y: 20,
+        x: 20,
         opacity: 0,            
     },"<")
     .to([baseSlider],{
