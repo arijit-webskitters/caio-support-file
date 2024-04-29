@@ -1,3 +1,18 @@
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+// call this to Enable
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+  window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
 var Webflow = Webflow || [];
 Webflow.push(function () {
     // document start
@@ -326,6 +341,17 @@ Webflow.push(function () {
         } else {
             $(".rv-section-rht-col").removeClass("present");
             $(".the-caio-img-wpr").removeClass("part-show");                
+        }
+        if (self.progress > 0.42 && self.progress <= 0.43) {
+            disableScroll()
+            setTimeout(function(){
+                enableScroll()              
+             },1500)
+        } else {
+            $(".the-caio-img-wpr").removeClass("part-show");
+            // setTimeout(function(){
+            //     $(".the-caio-img-wpr").removeClass("part-show");                
+            // },3500)
         }
         /*if (self.progress > 0.75 && self.progress <= 0.9) {
             // setTimeout(function(){
