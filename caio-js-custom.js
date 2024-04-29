@@ -300,7 +300,7 @@ Webflow.push(function () {
     .to(topSticker,{
         y: 0,
         opacity: 1,            
-    },"-=20%")
+    },"-=40%")
     .to([topLeftArrow,topRightArrow],{
         x: 0,
         opacity: 1,            
@@ -322,7 +322,7 @@ Webflow.push(function () {
       //onEnter: () => ScrollTrigger.refresh(),
       onUpdate: (self) => {
         console.log(self.progress);
-        if (self.progress > 0.45 && self.progress <= 0.58) {
+        if (self.progress > 0.45 && self.progress <= 0.565) {
             $(".rv-section-rht-col").addClass("present");
             $(".the-caio-img-wpr").addClass("part-show");                
         } else {
