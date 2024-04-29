@@ -289,10 +289,8 @@ Webflow.push(function () {
         opacity: 0,            
     },"<")
     .to(baseSlider,{
-        opacity: 0,            
-    })
-    .to(baseSlider,{
-        opacity: 0,            
+        opacity: 0,
+        delay: 0.2,
     })
     .set([topSliderAnimWpr], { 
         opacity: 1,
@@ -322,7 +320,7 @@ Webflow.push(function () {
       //onEnter: () => ScrollTrigger.refresh(),
       onUpdate: (self) => {
         console.log(self.progress);
-        if (self.progress > 0.45 && self.progress <= 0.565) {
+        if (self.progress > 0.45 && self.progress <= 0.56) {
             $(".rv-section-rht-col").addClass("present");
             $(".the-caio-img-wpr").addClass("part-show");                
         } else {
