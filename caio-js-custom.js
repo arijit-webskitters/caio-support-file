@@ -256,10 +256,12 @@ Webflow.push(function () {
         console.log(self.progress);
         if (self.progress > 0.75 && self.progress <= 0.9) {
             $(".rv-section-rht-col").addClass("present");
+            $(".the-caio-img-wpr").addClass("part-show");                
         } else {
             $(".rv-section-rht-col").removeClass("present");
+            $(".the-caio-img-wpr").removeClass("part-show");                
         }
-        if (self.progress > 0.75 && self.progress <= 0.9) {
+        /*if (self.progress > 0.75 && self.progress <= 0.9) {
             // setTimeout(function(){
                 $(".the-caio-img-wpr").addClass("part-show");                
                 $(".the-caio-img-wpr").removeClass("instant");                
@@ -271,7 +273,7 @@ Webflow.push(function () {
             // setTimeout(function(){
             //     $(".the-caio-img-wpr").removeClass("part-show");                
             // },3500)
-        }
+        }*/
       },
     });
 
