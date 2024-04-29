@@ -272,6 +272,10 @@ Webflow.push(function () {
         y: 0,
         opacity: 1,            
     },"-=40%")
+    .to(baseSlider,{
+        opacity: 0,
+        delay: 0.2,
+    })
     .to(baseSticker,{
         y: 50,
         opacity: 0,            
@@ -288,10 +292,6 @@ Webflow.push(function () {
         y: 50,
         opacity: 0,            
     },"<")
-    .to(baseSlider,{
-        opacity: 0,
-        delay: 0.2,
-    })
     .set([topSliderAnimWpr], { 
         opacity: 1,
         pointerEvents: "all" })
