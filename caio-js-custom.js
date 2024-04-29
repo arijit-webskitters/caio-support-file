@@ -26,7 +26,10 @@ Webflow.push(function () {
       baseLeftArrow = el.querySelector(".base-tool-arw-btn.left-arrow"),
       baseRightArrow = el.querySelector(".base-tool-arw-btn.right-arrow"),
       baseSlider = el.querySelector(".base-tool-slider"),
-      topSlider = el.querySelector(".base-tool-slider"),
+      topSticker = el.querySelector(".caio-top-sticker-wpr"),
+        topLeftArrow = el.querySelector(".top-tool-arw-btn.left-arrow"),
+      topRightArrow = el.querySelector(".top-tool-arw-btn.right-arrow"),
+      topSlider = el.querySelector(".top-tool-slider"),
       //altImg = el.querySelector(".ps"),
       item = el.querySelector(".rv-section-rht-col");
 
@@ -50,10 +53,10 @@ Webflow.push(function () {
         rotate: -25 
     });
     gsap.set(btn, { opacity: 0, yPercent: 100 });
-    gsap.set(baseSticker, { opacity: 0, y: 50 });
-    gsap.set(baseLeftArrow, { opacity: 0, x: -50 });
-    gsap.set(baseRightArrow, { opacity: 0, x: 50 });
-    gsap.set(baseSlider, { opacity: 0, y: 70 });
+    gsap.set([baseSticker,topSticker], { opacity: 0, y: 50 });
+    gsap.set([baseLeftArrow,topLeftArrow], { opacity: 0, x: -50 });
+    gsap.set([baseRightArrow,topRightArrow], { opacity: 0, x: 50 });
+    gsap.set([baseSlider,topSlider], { opacity: 0, y: 70 });
     gsap.set([subheadline, subheadline2], {
       opacity: 0,
       pointerEvents: "none",
