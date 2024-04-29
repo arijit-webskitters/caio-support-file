@@ -273,15 +273,15 @@ Webflow.push(function () {
     .to([baseLeftArrow,baseRightArrow],{
         y: -20,
         opacity: 0,            
-    },"-=40%")
+    },"<")
     .to([baseSlider],{
         y: 50,
         opacity: 0,            
-    },"-=40%")
+    },"<")
     .to(topSticker,{
         y: 0,
         opacity: 1,            
-    },"-=40%")
+    },"-=20%")
     .to([topLeftArrow,topRightArrow],{
         x: 0,
         opacity: 1,            
