@@ -254,7 +254,7 @@ Webflow.push(function () {
     .to(baseSticker,{
         y: 0,
         opacity: 1,            
-    },"-=30%")
+    })
     .to([baseLeftArrow,baseRightArrow],{
         x: 0,
         opacity: 1,            
